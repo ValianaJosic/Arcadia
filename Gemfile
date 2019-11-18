@@ -5,6 +5,7 @@ ruby '>= 2.6'
 gem 'devise'
 gem 'react_on_rails'
 gem 'hirb'
+gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 # Use postgresql as the database for Active Record
