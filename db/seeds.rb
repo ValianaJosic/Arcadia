@@ -73,10 +73,8 @@ Event.create(
   eventable_id: 1
 )
 
-puts  "======================"
-puts  Prescription.count
-puts  "======================"
-
 puts "Created #{User.count} users and #{Profile.count} profiles."
 puts "Created #{Survey.count} survey with #{Question.count} question. "
 puts "Created #{Response.count} responses."
+puts "Created #{Prescription.count} prescriptions and #{Contact.count} contacts."
+puts "Create #{Event.count} total events."
