@@ -31,13 +31,15 @@ Survey.all.each do |survey|
     name: "What's your gender?",
     is_active: true
   )
+end
 
-  User.all.each do |user|
-    Response.create(
-      user: user,
-      question: 0,
-      value: ["male", "female"].sample
-    )
+User.all.each do |user|
+  Response.create(
+    user: user,
+    question: Question.all[0],
+    value: ["male", "female"].sample
+  )
+end
 
 puts "Created #{User.count} users and #{Profile.count} profiles."
 
