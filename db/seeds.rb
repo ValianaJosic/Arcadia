@@ -1,16 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 10.times do |i|
-  User.create(email: "person#{i+1}@arcadia.com", password: 'password', password_confirmation: 'password')
+  User.create(email: "person#{i+1}@arcadiauser.com", password: 'password', password_confirmation: 'password')
 end
 
 User.all.each do |user|
+  Faker::Config.locale = 'en-US'
   Profile.create(
     user: user,
     first_name: Faker::Name.first_name,
@@ -22,56 +15,125 @@ User.all.each do |user|
   )
 end
 
-
 Survey.create(name: "Sign up survey", is_active: true)
 
-Survey.all.each do |survey|
+question = [
+  "I am the...",
+  "I have...",
+  "Why are you intrested in fertility treatment?",
+  "Does your insurance cover fertility?",
+  "I want to learn about...",
+  "What is your zipcode?",
+  "What year were you"
+]
+
+question.each_with_index do |q, i|
   Question.create(
-    survey: survey,
-    name: "What's your gender?",
+    survey_id: 1,
+    name: question[i],
     is_active: true
   )
 end
 
-User.all.each do |user|
-  Response.create(
-    user: user,
-    question: Question.all[0],
-    value: ["male", "female"].sample
-  )
-end
-
-2.times do 
-  User.all.each do |user|
-    Prescription.create(
-      user: user,
+User.all.each do |u|
+  Question.all.each_with_index do |q, i|
+    responses = [
+      [
+        "Patient",
+        "Partner"
+      ],
+      [
+        "already started my treatment",
+        "not started my treatment"
+      ],
+      [
+        "I was referred by my OB/GYN",
+        "Due to my medical history I'm seeking help",
+        "Due to my age I'm seeking help",
+        "I prefer not to say"
+      ],
+      [
+        "Yes",
+        "No"
+      ],
+      [
+        "IVF",
+        "IUI Natural",
+        "Preservation",
+        "Egg Freezing",
+        "Egg Donation",
+        "Surrogacy",
+        "FET",
+        "Donor Sprem",
+        "Clomid",
+        "Embryo Frezezing"
+      ],
+      [
+        Faker::Address.zip
+      ],
+      [
+        rand(1980..1990)
+      ]
+    ]
+    Response.create(
+      user: u,
+      question: q,
+      value: responses[i].sample
     )
   end
 end
 
-User.all.each do |user|
-  Contact.create(
-    user: user,
-    name: Faker::Name.first_name,
-    zipcode: Faker::Address.zip
-  )
+2.times do 
+  User.all.each do |u|
+    Prescription.create(
+      user: u,
+    )
+  end
 end
 
-Event.create(
-  user_id: 1,
-  activity_date: Date.today,
-  notes: "blah blah blah",
-  eventable_type: 'Prescription',
-  eventable_id: 1
-)
+5.times do |i|
+  User.all.each do |u|
+    Faker::Config.locale = 'en-US'
+    Contact.create(
+      user: u,
+      name: Faker::Company.name,
+      phone1: Faker::PhoneNumber.cell_phone,
+      phone2: Faker::PhoneNumber.phone_number,
+      fax: Faker::PhoneNumber.phone_number,
+      email: "contact#{i}_#{u.id}@arcadiacontact.com",
+      address1: Faker::Address.street_name,
+      city: Faker::Address.city,
+      state:  Faker::Address.state_abbr,
+      zipcode: Faker::Address.zip,
+      country: Faker::Address.country,
+      notes: Faker::Lorem.sentences
+    )
+  end
+end
 
-Event.create(
-  user_id: 1,
-  activity_date: Date.today,
-  notes: "blah blah blah",
-  eventable_type: 'Contact',
-  eventable_id: 1
-)
+4.times do |i|
+  Prescription.all.each do |pr|
+    Event.create(
+      user: pr.user,
+      activity_date: Faker::Date.between(from: 2.days.from_now, to: 2.weeks.from_now),
+      notes: Faker::Lorem.sentences,
+      eventable_type: 'Prescription',
+      eventable_id: pr.id
+    )
+  end
+end
+
+2.times do |i|
+  Contact.all.each do |c|
+    Event.create(
+      user: c.user,
+      activity_date: Faker::Date.between(from: 2.weeks.from_now, to: 2.months.from_now),
+      notes: Faker::Lorem.sentences,
+      eventable_type: 'Contact',
+      eventable_id: c.id
+    )
+  end
+end
 
 puts "Created #{User.count} users and #{Profile.count} profiles."
 puts "Created #{Survey.count} survey with #{Question.count} question. "
