@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile
+  has_many :prescriptions
+  has_many :contacts
+  has_many :responses
+  has_many :events
+
 end

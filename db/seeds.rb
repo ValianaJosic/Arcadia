@@ -41,6 +41,40 @@ User.all.each do |user|
   )
 end
 
-puts "Created #{User.count} users and #{Profile.count} profiles."
+2.times do 
+  User.all.each do |user|
+    Prescription.create(
+      user: user,
+    )
+  end
+end
 
-puts "Created #{Survey.count} survey with #{Question.count} question. Added #{Response.count} responses."
+User.all.each do |user|
+  Contact.create(
+    user: user,
+    name: Faker::Name.first_name,
+    zipcode: Faker::Address.zip
+  )
+end
+
+Event.create(
+  user_id: 1,
+  activity_date: Date.today,
+  notes: "blah blah blah",
+  eventable_type: 'Prescription',
+  eventable_id: 1
+)
+
+Event.create(
+  user_id: 1,
+  activity_date: Date.today,
+  notes: "blah blah blah",
+  eventable_type: 'Contact',
+  eventable_id: 1
+)
+
+puts "Created #{User.count} users and #{Profile.count} profiles."
+puts "Created #{Survey.count} survey with #{Question.count} question. "
+puts "Created #{Response.count} responses."
+puts "Created #{Prescription.count} prescriptions and #{Contact.count} contacts."
+puts "Create #{Event.count} total events."
