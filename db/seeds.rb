@@ -23,3 +23,17 @@ User.all.each do |user|
 end
 
 puts "Created #{User.count} users and #{Profile.count} profiles."
+
+Survey.create(name: "Sign up survey", is_active: true)
+
+Survey.all.each do |survey|
+  Question.create(
+    survey: survey,
+    name: "What's your gender?",
+    is_active: true
+  )
+
+# User.all.each do |user|
+#   Response.create(
+
+#   )
