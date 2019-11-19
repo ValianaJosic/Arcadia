@@ -22,4 +22,25 @@ User.all.each do |user|
   )
 end
 
+
+Survey.create(name: "Sign up survey", is_active: true)
+
+Survey.all.each do |survey|
+  Question.create(
+    survey: survey,
+    name: "What's your gender?",
+    is_active: true
+  )
+end
+
+User.all.each do |user|
+  Response.create(
+    user: user,
+    question: Question.all[0],
+    value: ["male", "female"].sample
+  )
+end
+
 puts "Created #{User.count} users and #{Profile.count} profiles."
+
+puts "Created #{Survey.count} survey with #{Question.count} question. Added #{Response.count} responses."
