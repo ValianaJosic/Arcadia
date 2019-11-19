@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :prescriptions
   has_many :contacts
   has_many :responses
+  has_many :events
 
 end

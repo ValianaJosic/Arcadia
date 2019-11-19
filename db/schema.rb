@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_000538) do
+ActiveRecord::Schema.define(version: 2019_11_19_051800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name", null: false
+    t.string "phone1"
+    t.string "phone2"
+    t.string "fax"
+    t.string "email"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode", null: false
+    t.string "country"
+    t.text "notes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "activity_date", null: false
+    t.text "notes", null: false
+    t.string "eventable_type"
+    t.bigint "eventable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["eventable_type", "eventable_id"], name: "index_events_on_eventable_type_and_eventable_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "prescriptions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_prescriptions_on_user_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.bigint "user_id"
