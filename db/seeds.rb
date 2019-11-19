@@ -22,7 +22,6 @@ User.all.each do |user|
   )
 end
 
-puts "Created #{User.count} users and #{Profile.count} profiles."
 
 Survey.create(name: "Sign up survey", is_active: true)
 
@@ -33,7 +32,13 @@ Survey.all.each do |survey|
     is_active: true
   )
 
-# User.all.each do |user|
-#   Response.create(
+  User.all.each do |user|
+    Response.create(
+      user: user,
+      question: 0,
+      value: ["male", "female"].sample
+    )
 
-#   )
+puts "Created #{User.count} users and #{Profile.count} profiles."
+
+puts "Created #{Survey.count} survey with #{Question.count} question. Added #{Response.count} responses."
