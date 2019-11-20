@@ -15,3 +15,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import ReactOnRails from 'react-on-rails';
+ 
+import NDCSearch from '../bundles/NDCSearch/components/NDCSearch';
+ 
+ReactOnRails.register({ NDCSearch });
