@@ -1,22 +1,15 @@
 <%= form_with(url: "/save", method: "post") do %>
   <%= label_tag(:q, "Save Event To Calendar:") %>
-  <%= text_field_tag(:q) %>
+  
+    <%= radio_button_tag(:drug, "Drug") %>
+    <%= label_tag(:drug_administration, "Drug") %>
+    <%= radio_button_tag(:appt, "Appointment") %>
+    <%= label_tag(:professional_appointment, "Appointment") %>
 
+    <%= date_field(:user, :born_on, min: Date.today) %>
 
-
-
-<%= radio_button_tag(:drug, "Drug") %>
-<%= label_tag(:drug_administration, "Drug") %>
-<%= radio_button_tag(:appt, "Appointment") %>
-<%= label_tag(:professional_appointment, "Appointment") %>
-
-
-<%= radio_button_tag(:drug_administration) %>
-<%= label_tag(:drug_administration, "Drug") %>
-<%= radio_button_tag(:professional_appointment) %>
-<%= label_tag(:professional_appointment, "Appointment") %>
+    <%= text_field_tag(:q) %>
 
   <%= submit_tag("Search") %>
-
 
 <% end %>
