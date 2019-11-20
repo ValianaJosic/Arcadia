@@ -60,7 +60,4 @@ export default class NDCSearch extends React.Component {
     )
   }
 
-  // componentDidMount() {
-  //   this.getDrug();
-  // }
 }
