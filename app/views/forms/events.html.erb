@@ -1,2 +1,22 @@
-<h1>Hello World</h1>
-<%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
+<%= form_with(url: "/save", method: "post") do %>
+  <%= label_tag(:q, "Save Event To Calendar:") %>
+  <%= text_field_tag(:q) %>
+
+
+
+
+<%= radio_button_tag(:drug, "Drug") %>
+<%= label_tag(:drug_administration, "Drug") %>
+<%= radio_button_tag(:appt, "Appointment") %>
+<%= label_tag(:professional_appointment, "Appointment") %>
+
+
+<%= radio_button_tag(:drug_administration) %>
+<%= label_tag(:drug_administration, "Drug") %>
+<%= radio_button_tag(:professional_appointment) %>
+<%= label_tag(:professional_appointment, "Appointment") %>
+
+  <%= submit_tag("Search") %>
+
+
+<% end %>
