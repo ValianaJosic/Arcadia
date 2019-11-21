@@ -1,0 +1,20 @@
+<%= form_with(url: "/save", method: "post") do %>
+  
+  <%= label_tag(:q, "Save Event To Calendar:") %>
+  <p>
+    <%= radio_button_tag(:drug, "Drug") %>
+    <%= label_tag(:drug_administration, "Drug") %>
+    <%= radio_button_tag(:appt, "Appointment") %>
+    <%= label_tag(:professional_appointment, "Appointment") %>
+</p>
+<p>
+    <%= datetime_field(:user, :event_time, min: Date.today) %>
+</p>
+<p>
+    <%= text_field_tag(:q) %>
+</p>
+
+  <%= submit_tag("Save") %>
+  <%= button_tag("Cancel") %>
+
+<% end %>
