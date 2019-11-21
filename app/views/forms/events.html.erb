@@ -1,3 +1,5 @@
+<%= link_to 'New Event', event_path(@Event) %>
+
 <%= form_with(url: "/save", method: "post") do %>
   
   <%= label_tag(:q, "Save Event To Calendar:") %>
