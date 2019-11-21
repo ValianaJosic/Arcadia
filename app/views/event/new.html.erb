@@ -2,10 +2,9 @@
   
   <%= label_tag(:q, "Create New Event:") %>
   <p>
-    <%= radio_button_tag(:drug, "RX") %>
-    <%= label_tag(:drug_administration, "Drug") %>
-    <%= radio_button_tag(:appt, "DR") %>
-    <%= label_tag(:professional_appointment, "Appointment") %>
+
+  <%= select_tag("people", raw("<option>Drug</option><option>Appointment</option>"))%>
+
 </p>
 <p>
     <%= datetime_field(:user, :event_time, min: Date.today) %>

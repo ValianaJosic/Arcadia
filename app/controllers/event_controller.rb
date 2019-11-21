@@ -19,14 +19,6 @@ class EventController < ApplicationController
         def create
           @Event = Event.new(Event_params)
 
-            Event.create(
-        user: pr.user,
-        activity_date: Faker::Date.between(from: 2.days.from_now, to: 2.weeks.from_now),
-        notes: Faker::Lorem.sentences,
-        eventable_type: 'Prescription',
-        eventable_id: pr.id
-        )
-
         Event.create(
             user: c.user,
             activity_date: Faker::Date.between(from: 2.weeks.from_now, to: 2.months.from_now),
@@ -34,8 +26,6 @@ class EventController < ApplicationController
             eventable_type: 'Contact',
             eventable_id: c.id
         )
-
-
         
           if @Event.save
             redirect_to @Event
