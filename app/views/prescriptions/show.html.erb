@@ -1,13 +1,1 @@
 <%= react_component("NDCSearch") %>
-
-<%= form_with url: prescriptions_add_path do |form| %>
- <p>
-      <p>
-      <%= label_tag(:drug_search_name, "Enter Drug Name or NDC Number") %>
-      </p>
-      <p>
-      <%= text_field_tag(:drug_search) %>
-      </p>
-</p>
-
-<% end %>
