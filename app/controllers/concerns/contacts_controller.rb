@@ -29,6 +29,7 @@ class ContactsController < ApplicationController
           )
     respond_to do |format|
       format.html do
+        # root_url needs to be changed once we figure out where it will go
         if contact.save
           redirect_to fallback_location: root_url, notice: "Task successfully created"
         else
