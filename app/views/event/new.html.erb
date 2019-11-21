@@ -1,17 +1,23 @@
 <%= form_with(url: "/save", method: "post") do %>
   
-  <%= label_tag(:q, "Save Event To Calendar:") %>
+  <%= label_tag(:q, "Create New Event:") %>
   <p>
-    <%= radio_button_tag(:drug, "Drug") %>
+    <%= radio_button_tag(:drug, "RX") %>
     <%= label_tag(:drug_administration, "Drug") %>
-    <%= radio_button_tag(:appt, "Appointment") %>
+    <%= radio_button_tag(:appt, "DR") %>
     <%= label_tag(:professional_appointment, "Appointment") %>
 </p>
 <p>
     <%= datetime_field(:user, :event_time, min: Date.today) %>
 </p>
 <p>
+    <%# Conditional evaluation will be added later %>
+    <p>
+    <%= label_tag(:q, "Enter Dr. Name or National Drug Code #") %>
+    </p>
+    <p>
     <%= text_field_tag(:q) %>
+    </p>
 </p>
 
   <%= submit_tag("Save") %>
