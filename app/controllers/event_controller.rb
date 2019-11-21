@@ -17,21 +17,21 @@ class EventController < ApplicationController
         end
         
         def create
-          @Event = Event.new(Event_params)
 
-        Event.create(
-            user: Event_params.user,
-            activity_date: EventParams.Date, 
-            notes: Event_params.notes,
-            eventable_type: Event_params.eventable_type,
-            eventable_id: Event_params.id
-        )
+            puts params
         
-          if @Event.save
-            redirect_to @Event
-          else
-            render 'new'
-          end
+            # @Event = Event.new(params)
+
+            Event.create(
+                # user: user,
+                activity_date: params[:event_date_time], 
+                notes: params[:event_note],
+                eventable_type: params[:event_type].to_s,
+                eventable_id: 42, 
+            )
+
+            puts "Created #{Event.count} event(s) sucessfully."
+        
         end
         
         def update
@@ -48,12 +48,7 @@ class EventController < ApplicationController
           @Event = Event.find(params[:id])
           @Event.destroy
         
-          redirect_to Events_path
+          redirect_to events_path
         end
         
-        private
-          def Event_params
-            params.require(:Event).permit(:title, :text)
-          end
-
 end
