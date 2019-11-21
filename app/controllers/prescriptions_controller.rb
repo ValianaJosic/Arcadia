@@ -1,5 +1,8 @@
 class PrescriptionsController < ApplicationController
 
+  def show
+  end
+  
   def create
     prescription = Prescription.new(
       user: current_user,
