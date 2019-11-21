@@ -1,0 +1,19 @@
+<style>
+  .questions {
+    margin-top: 25px;
+  }
+</style>
+
+<div>
+  <h1><%= @survey %></h1>
+</div>
+
+
+<%= form_with url: '/addresponses' do |form| %>
+  <div class='questions'>
+      <%= form.label @question_id, @question%>
+      <%= form.text_field @question_id %>
+      <%= @question_id %>
+  </div>
+  <%= form.submit %>
+<% end %>
