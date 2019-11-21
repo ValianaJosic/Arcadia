@@ -20,11 +20,11 @@ class EventController < ApplicationController
           @Event = Event.new(Event_params)
 
         Event.create(
-            user: c.user,
-            activity_date: Faker::Date.between(from: 2.weeks.from_now, to: 2.months.from_now),
-            notes: Faker::Lorem.sentences,
-            eventable_type: 'Contact',
-            eventable_id: c.id
+            user: Event_params.user,
+            activity_date: EventParams.Date, 
+            notes: Event_params.notes,
+            eventable_type: Event_params.eventable_type,
+            eventable_id: Event_params.id
         )
         
           if @Event.save
