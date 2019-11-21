@@ -59,11 +59,32 @@ export default class NDCSearch extends React.Component {
         
         {/* THIS IS THE FORM WE NEED POPULATED WITH THE API AND SUBMISSION TO THE DATABASE */}
         {/* WITH THE CORRECT FIELDS MAPPED TO THE prescriptions TABLE IN THE DB/SCHEMA */}
+        <div class="prescription_data">
         <form action="/prescriptions/add" method="POST">
           <input type="hidden" name="authenticity_token" readOnly value={ReactOnRails.authenticityToken()}/>
-          <div>
+            <div>
             <label htmlFor="brand">Brand</label>
             <input id="brand" type="text" value={myObj.brandName} readOnly/>
+          </div>
+          <div>
+            <label htmlFor="brand">Generic Name</label>
+            <input id="generic-name" type="text" value={myObj.genericName} readOnly/>
+          </div>
+          <div>
+            <label htmlFor="brand">Dosage Form</label>
+            <input id="dosage-form" type="text" value={myObj.dosageForm} readOnly/>
+          </div>
+          <div>
+            <label htmlFor="brand">Product Type</label>
+            <input id="product-type" type="text" value={myObj.productType} readOnly/>
+          </div>
+          <div>
+            <label htmlFor="brand">Product Id</label>
+            <input id="product-id" type="text" value={myObj.productID} readOnly/>
+          </div>
+          <div>
+            <label htmlFor="brand">Product NDC</label>
+            <input id="product-ndc" type="text" value={myObj.productNDC} readOnly/>
           </div>
           <div>
             <label htmlFor="notes">Notes</label>
@@ -72,6 +93,7 @@ export default class NDCSearch extends React.Component {
           <button type="submit">Submit</button>
 
         </form>
+        </div>
       </div>
     )
   }
