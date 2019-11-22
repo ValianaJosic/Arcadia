@@ -19,7 +19,6 @@ class PrescriptionsController < ApplicationController
  end
   
   def create
-
     @prescriptionadd = Prescription.create(
       user: current_user,
       brand_name: params[:brandName],
