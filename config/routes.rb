@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   root  'home#index'
   
   get   '/home'               => 'home#index'
-  get   '/signupsurvey'             => 'signupsurvey#show'
-  get   '/prescriptions'      => 'prescriptions#show'
+  get   '/signupsurvey'       => 'signupsurvey#index'
+  
+  get   '/prescriptions'      => 'prescriptions#index' 
   post  '/prescriptions/add'  => 'prescriptions#create'
+
   post  '/addresponses'       =>  'addresponses#create'
 
   resources :event
