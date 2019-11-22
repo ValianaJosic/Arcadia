@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get   '/contacts'           =>  'contacts#index'
   post  '/contacts/add'       =>  'contacts#create'
 
+  get   '/events'             =>  'events#index'
+  post  '/events/add'         =>  'events#create'
 
-  resources :events
-  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

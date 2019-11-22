@@ -1,6 +1,14 @@
 class ContactsController < ApplicationController
 
   def index
+    respond_to do |format|
+      format.html
+      format.json do
+        contacts = current_user
+                  .contacts
+        render json: contacts 
+      end
+    end
   end
 
   def create
@@ -20,6 +28,5 @@ class ContactsController < ApplicationController
       notes: params[:notes]
     )
   end
-  puts @contactadd
 
 end

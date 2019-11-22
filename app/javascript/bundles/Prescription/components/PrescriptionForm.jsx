@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const headers = ReactOnRails.authenticityHeaders()
 
-export default class NDCSearch extends React.Component {
+export default class PrescriptionForm extends React.Component {
   state = { ndcQuery: '', userNotes: '', drug: {brandName: '', dosageForm: '',genericName: '',productID: '',productNDC: '',productType: '' } }
 
   handleInputChange = field => e => {
