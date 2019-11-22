@@ -9,6 +9,12 @@
 <table>
   <tbody>
     <% @prescriptions.each do |prescription| %>
+    <td><%= prescription.brand_name %><td>
+    <td><%= prescription.generic_name %><td>
+    <td><%= prescription.dosage_form %><td>
+    <td><%= prescription.product_type %><td>
+    <td><%= prescription.product_ndc %><td>
+    <td><%= prescription.user_dosage %><td>
     <td><%= prescription.user_notes %><td>
     <% end %>
   </tbody>
