@@ -1,20 +1,24 @@
 class EventsController < ApplicationController
 
-        def index
-          @Events = Event.all
+        def index    
+            if current_user
+              @events = current_user.events
+            else
+              redirect_to user_session_path, notice: 'You are not logged in.'
+            end
         end
         
-        def show
-          @Event = Event.find(params[:id])
-        end
+        # def show
+        #   @Event = Event.find(params[:id])
+        # end
         
-        def new
-          @Event = Event.new
-        end
+        # def new
+        #   @Event = Event.new
+        # end
  
-        def edit
-          @Event = Event.find(params[:id])
-        end
+        # def edit
+        #   @Event = Event.find(params[:id])
+        # end
         
         def create
 

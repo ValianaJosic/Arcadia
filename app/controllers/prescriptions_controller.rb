@@ -1,8 +1,12 @@
 class PrescriptionsController < ApplicationController
 
-  def index
-    @prescriptions = current_user.prescriptions
-  end
+  def index    
+    if current_user
+      @prescriptions = current_user.prescriptions
+    else
+      redirect_to user_session_path, notice: 'You are not logged in.'
+    end
+ end
   
   def create
   Prescription.create(

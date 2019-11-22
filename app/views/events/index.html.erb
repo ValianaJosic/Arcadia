@@ -1,0 +1,15 @@
+<h1>User Events Page</h1>
+
+<h4>Users Event List</h4>
+<div style='display:grid'>
+<table>
+  <tbody>
+    <% @events.each do |event| %>
+    <td><%= event.eventable_type %><td>
+    <td><%= event.eventable_id %><td>
+    <td><%= event.activity_date %><td>
+    <td><%= event.notes %><td>
+    <% end %>
+  </tbody>
+<table>
+</div>
