@@ -1,1 +1,68 @@
-<h1>HI from contact inex!</h1>
+<h1>User Contacts Page</h1>
+<%= form_with url: '/contacts/add' do |form| %>
+    <div class="row">
+    <div class="form-group col-md-8">
+      <%= form.label :name %>
+      <%= form.text_field :name,
+      autocomplete: "off", autofocus: true, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-8">
+      <%= form.label :phone1 %>
+      <%= form.text_field :phone1,
+      autocomplete: "off", autofocus: true, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :phone2 %>
+      <%= form.text_field :phone2,
+      class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :fax %>
+      <%= form.text_field :fax,
+      class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :email %>
+      <%= form.text_field :email,
+      class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :address1 %>
+      <%= form.text_field :address1,
+      class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :address2 %>
+      <%= form.text_field :address2,
+      class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :city %>
+      <%= form.text_field :city,
+      class: "form-control" %>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :state %>
+      <%= form.text_field :state,
+      class: "form-control" %>
+    </div>      
+    <div class="form-group col-md-4">
+      <%= form.label :zipcode %>
+      <%= form.text_field :zipcode,
+      class: "form-control" %>
+    </div> 
+    <div class="form-group col-md-4">
+      <%= form.label :country %>
+      <%= form.text_field :country,
+      class: "form-control" %>
+    </div> 
+    <div class="form-group col-md-4">
+      <%= form.label :notes %>
+      <%= form.text_area :notes,
+      class: "form-control" %>
+    </div>
+  </div>
+  <%= form.submit "Create Contact"%>
+<% end %>
+
+<h4>Users Contact List</h4>

@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   
   root  'home#index'
   
-  get   '/home'               => 'home#index'
   get   '/signupsurvey'       => 'signupsurvey#index'
   
   get   '/prescriptions'      => 'prescriptions#index' 
@@ -11,7 +10,9 @@ Rails.application.routes.draw do
 
   post  '/addresponses'       =>  'addresponses#create'
 
+  get   '/contacts'           =>  'contacts#index'
+  post  '/contacts/add'       =>  'contacts#create'
+
   resources :event
-  resources :contacts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
