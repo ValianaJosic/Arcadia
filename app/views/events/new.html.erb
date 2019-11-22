@@ -1,4 +1,4 @@
-<%= form_with url: event_index_path do |form| %>
+<%= form_with url: events_path do |form| %>
   <%= label_tag(:q, "Create New Event:") %>
     <p>
     <%= select_tag("event_type", raw("<option>Prescription</option><option>Contact</option>"))%>
