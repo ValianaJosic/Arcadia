@@ -1,0 +1,17 @@
+<h1>User Prescriptions Page</h1>
+<div>
+  <h4>Search and Add a Prescriptions</h4>
+  <%= react_component("NDCSearch") %>
+</div>
+<div>
+  <h4>Users Prescription List</h4>
+<div style='display:grid'>
+<table>
+  <tbody>
+    <% @prescriptions.each do |prescription| %>
+    <td><%= prescription.user_notes %><td>
+    <% end %>
+  </tbody>
+<table>
+</div>
+

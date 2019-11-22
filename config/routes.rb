@@ -3,13 +3,18 @@ Rails.application.routes.draw do
   
   root  'home#index'
   
-  get   '/home'               => 'home#index'
-  get   '/signupsurvey'             => 'signupsurvey#show'
-  get   '/prescriptions'      => 'prescriptions#show'
+  get   '/signupsurvey'       => 'signupsurvey#index'
+  
+  get   '/prescriptions'      => 'prescriptions#index' 
   post  '/prescriptions/add'  => 'prescriptions#create'
+
   post  '/addresponses'       =>  'addresponses#create'
 
+  get   '/contacts'           =>  'contacts#index'
+  post  '/contacts/add'       =>  'contacts#create'
+
+
   resources :events
-  resources :contacts
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
