@@ -1,5 +1,7 @@
 class JournalController < ApplicationController
   def index
   end
-end
 
+  def new
+  end
+end
