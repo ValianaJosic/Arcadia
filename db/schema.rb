@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_232137) do
+ActiveRecord::Schema.define(version: 2019_11_23_202233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,23 @@ ActiveRecord::Schema.define(version: 2019_11_20_232137) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["eventable_type", "eventable_id"], name: "index_events_on_eventable_type_and_eventable_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "journal_entries", force: :cascade do |t|
+    t.bigint "journal_id", null: false
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["journal_id"], name: "index_journal_entries_on_journal_id"
+  end
+
+  create_table "journals", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_journals_on_user_id"
   end
 
   create_table "prescriptions", force: :cascade do |t|
@@ -114,4 +131,5 @@ ActiveRecord::Schema.define(version: 2019_11_20_232137) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "journal_entries", "journals"
 end
