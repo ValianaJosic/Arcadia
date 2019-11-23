@@ -9,5 +9,6 @@ class User < ApplicationRecord
   has_many :contacts
   has_many :responses
   has_many :events
+  has_many :entries
 
 end
