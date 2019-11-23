@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     @contact = current_user.contacts
     else
       redirect_to user_session_path, notice: 'You are not logged in.'
-    end   
+    end
   end
 
   def create

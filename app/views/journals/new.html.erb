@@ -1,22 +1,17 @@
 <div>
-  <%= form_with scope: :entry, local: true do |form| %>
+  <%= form_for @journal, local: true do |form| %>
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
     </p>
 
     <p>
-      <%= form.label :date %><br>
-      <%= form.text_area :date %>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
     </p>
 
     <p>
-      <%= form.label :text %><br>
-      <%= form.text_area :text %>
-    </p>
-
-    <p>
-      <%= form.submit %>
+      <%= form.submit 'Create Entries' %>
     </p>
   <% end %>
 </div>
