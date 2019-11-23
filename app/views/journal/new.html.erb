@@ -1,3 +1,28 @@
+<div>
+  <%= form_with scope: :entry, local: true do |form| %>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </p>
+
+    <p>
+      <%= form.label :date %><br>
+      <%= form.text_area :date %>
+    </p>
+
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+</div>
+
+
+
 <h1>Journal#new</h1>
 <p>Find me in app/views/journal/new.html.erb</p>
 <br>

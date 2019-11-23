@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post  '/contacts/add'       =>  'contacts#create'
 
   get  '/journal'             =>  'journal#index'
+  post '/journal/new'         =>  "journal#create"
 
   resources :events, :journal
 
