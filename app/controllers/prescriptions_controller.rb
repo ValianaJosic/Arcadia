@@ -1,12 +1,15 @@
 class PrescriptionsController < ApplicationController
-
-  def index    
-    if current_user
-      @prescriptions = current_user.prescriptions
-    else
-      redirect_to user_session_path, notice: 'You are not logged in.'
+ 
+  def index  
+    respond_to do |format|
+      format.html
+      format.json do
+        prescriptions = current_user
+                  .prescriptions
+        render json: prescriptions 
+      end
     end
- end
+  end
   
   def create
   Prescription.create(

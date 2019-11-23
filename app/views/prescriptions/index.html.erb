@@ -5,19 +5,5 @@
 </div>
 <div>
   <h4>Users Prescription List</h4>
-<div style='display:grid'>
-<table>
-  <tbody>
-    <% @prescriptions.each do |prescription| %>
-    <td><%= prescription.brand_name %><td>
-    <td><%= prescription.generic_name %><td>
-    <td><%= prescription.dosage_form %><td>
-    <td><%= prescription.product_type %><td>
-    <td><%= prescription.product_ndc %><td>
-    <td><%= prescription.user_dosage %><td>
-    <td><%= prescription.user_notes %><td>
-    <% end %>
-  </tbody>
-<table>
-</div>
+  <%= react_component("PrescriptionList") %>
 
