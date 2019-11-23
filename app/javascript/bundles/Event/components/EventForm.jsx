@@ -6,46 +6,102 @@ export const headers = ReactOnRails.authenticityHeaders()
 export default class EventForm extends React.Component {
   state = { 
     eventTypeOptions: {
-      Prescription: 'prescriptions',
-      Contact: 'contacts'
-    }
-            // eventTypeValue: ''
-          }
+                        'Select Type':    '',
+                        'Prescription':   'prescriptions',
+                        'Contact':        'contacts'
+                      },
+    eventTypeData: [],
+    eventValues: { type: '',name: '',date: '',time: '',notes: '' }
+  }
 
   handleChange = (e) => {
-    // this.setState({eventTypeValue: e.target.value});
-    this.fetchNames('contacts')
-      // e.target.value)
+    e.target.value !== '' ?
+    this.fetchData(e.target.value)
+    : ''
   }
 
-  fetchNames = (eventTypeValue) => {
+  fetchData = (eventTypeValue) => {
     axios.get(`/${eventTypeValue}.json`)
-      .then(response => console.log(response.data))
+    .then((response => {
+      const data = response.data
+      this.setState({ eventTypeData: data})
+      }
+    ))
   }
 
-  objectList = () => {
-    const {eventTypeOptions} =  this.state
-    for (const property in eventTypeOptions ) {
-    return <option key={property} value={eventTypeOptions[property]}>{property}</option>
+  optionsArray = (s) => {
+    let keys = []
+    let values = []
+    for (const property in s) {
+      keys.push(property)
+      values.push(s[property])
     }
-  }
-  
+     let options = keys.map((key,i) => {
+        return(
+          <option key={key} value={values[i]}>{key}</option>
+        )
+      })
+      return options
+    }
 
+    handleInputChange = field => e => {
+      const value = e.target.value.trim()
+      this.setState(prevState => ({
+        eventValues: {
+          ...prevState.eventValues,
+          [field]: value
+          }
+        }))
+      console.log("===========")
+      console.log(this.state.eventValues.date)
+      // nil
+      console.log(field)
+      // date (name)
+      console.log(value)
+      // date (value)
+      console.log("===========")
+      console.log(this.state.eventValues)
+      console.log("===========")
+    }
+
+    handleSubmit = async e => {
+    // const { eventValues } = this.state;
+    console.log("***********")
+    console.log(...this.state.eventValues)
+    console.log("***********")
+    // const { data } =  await axios.post("/events/add", { ...eventValues }, { headers })
+    preventDefault()
+    }
+  
   render() {
-    // let myVar = this.state.eventTypeOptions.map((type, index) => <option key={index} value={type}>{type}</option>)
     return(
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Event Type:
-          <select value={this.state.eventTypeValue} onChange={this.handleChange}>
-            {this.objectList()}
-          </select>
-        </label>
+        <div>
+          <label htmlFor="type">Type</label>
+            <select  onChange={this.handleChange}>
+              {this.optionsArray(this.state.eventTypeOptions).map(option => option)}
+            </select>
+        </div>
+        <div>
+          <label htmlFor="name">Name</label>
+            <select>
+              {this.state.eventTypeData.map(data => <option key={data.id} value={data.id}>{data.name}</option> )}
+            </select>
+        </div>
+        <div>
+          <label htmlFor="date">Date</label>
+          <input id="date" onChange={this.handleInputChange('date')} type="date" />
+        </div>
+        <div>
+          <label htmlFor="time">Time</label>
+          <input id="time" onChange={this.handleInputChange('time')} type="time" />
+        </div>
+        <div>
+          <label htmlFor="notes">Notes</label>
+          <input id="notes" onChange={this.handleInputChange('notes')} type="text" />
+        </div>
+        <button type="submit" >Submit</button>
       </form>
       )
     }
-
-    // componentDidMount(){
-    //   this.objectList()
-    // }
-}
+  }
