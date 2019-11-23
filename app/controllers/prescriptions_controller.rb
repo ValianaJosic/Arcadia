@@ -10,12 +10,7 @@ class PrescriptionsController < ApplicationController
         render json: prescriptions 
       end
     end
-
-    # if current_user
-    #   @prescriptions = current_user.prescriptions
-    # else
-    #   redirect_to user_session_path, notice: 'You are not logged in.'
-    # end
+    
  end
   
   def create
