@@ -4,34 +4,25 @@ import axios from 'axios';
 export const headers = ReactOnRails.authenticityHeaders()
 
 export default class PrescriptionList extends React.Component {
-    state = { ndcQuery: '', userNotes: '', drug: { brandName: '', dosageForm: '', genericName: '', productID: '', productNDC: '', productType: '' } }
 
-    //   handleInputChange = field => e => {
-    //     const value = e.target.value.trim();
-    //     this.setState({ [field]: value })
-    //   }
+    state = { DrugsList: []} 
 
     fetchDrugsList = () => {
-        const { ndcQuery } = this.state;
-        axios.get(`https://api.fda.gov/drug/ndc.json?search=product_ndc:"${ndcQuery}"`)
-            .then(({ data }) => {
-                const result = data.results[0] || {};
-                const {
-                    brand_name: brandName,
-                    generic_name: genericName,
-                    dosage_form: dosageForm,
-                    product_type: productType,
-                    product_id: productID,
-                    product_ndc: productNDC
-                } = result;
-                this.setState({ drug: { brandName, dosageForm, genericName, productID, productNDC, productType } })
-            })
-    }
 
-    handleSubmit = async e => {
-        const { drug, userNotes } = this.state;
-        const { data } = await axios.post("/prescriptions/add", { ...drug, userNotes }, { headers })
-    };
+        DrugsList = this.state;
+        axios.get(`prescriptions.json`).then((response => {
+            const data = response.data
+            this.setState({DrugsList: data})
+            }
+          ))
+
+    }
+    
+    //WILL ADD DELETE FUNCTIONALITY LATER
+    // handleSubmit = async e => {
+    //     const { drug, userNotes } = this.state;
+    //     const { data } = await axios.post("/prescriptions/delete", { ...drug, userNotes }, { headers })
+    // };
 
     render() {
         let myObj = this.state.drug
@@ -59,33 +50,36 @@ export default class PrescriptionList extends React.Component {
                     </span>
                 </div>
 
+                array.forEach(element => {
+
+                });
                 <div>
                     <div>
-                        <label htmlFor="brand">Brand Name</label>
-                        <input id="brand" type="text" value={myObj.brandName} readOnly />
+                        <b>Brand Name</b>
+                        <div> value={myObj.brandName}</div>
                     </div>
                     <div>
-                        <label htmlFor="brand">Generic Name</label>
+                        <b>Generic Name</b>
                         <input id="generic-name" type="text" value={myObj.genericName} readOnly />
                     </div>
                     <div>
-                        <label htmlFor="brand">Dosage Form</label>
+                        <b>Dosage Form</b>
                         <input id="dosage-form" type="text" value={myObj.dosageForm} readOnly />
                     </div>
                     <div>
-                        <label htmlFor="brand">Product Type</label>
+                        <b>Product Type</b>
                         <input id="product-type" type="text" value={myObj.productType} readOnly />
                     </div>
                     <div>
-                        <label htmlFor="brand">Product Id</label>
+                        <b>Product Id</b>
                         <input id="product-id" type="text" value={myObj.productID} readOnly />
                     </div>
                     <div>
-                        <label htmlFor="brand">Product NDC</label>
+                        <b>Product NDC</b>
                         <input id="product-ndc" type="text" value={myObj.productNDC} readOnly />
                     </div>
                     <div>
-                        <label htmlFor="notes">Notes</label>
+                        <b>Notes</b>
                         <input id="notes" onChange={this.handleInputChange('userNotes')} type="text" />
                     </div>
                     <button type="submit">Submit</button>
