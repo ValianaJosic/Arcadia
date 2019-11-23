@@ -14,12 +14,6 @@ export default class EventForm extends React.Component {
     eventValues: { type: '',name: '',date: '',time: '',notes: '' }
   }
 
-  handleChange = (e) => {
-    e.target.value !== '' ?
-    this.fetchData(e.target.value)
-    : ''
-  }
-
   fetchData = (eventTypeValue) => {
     axios.get(`/${eventTypeValue}.json`)
     .then((response => {
@@ -45,32 +39,25 @@ export default class EventForm extends React.Component {
     }
 
     handleInputChange = field => e => {
-      const value = e.target.value.trim()
+      let value = e.target.value.trim()
+      if (value === 'contacts') {
+          this.fetchData(value)
+          value = 'Contact'
+        } else if (value === 'prescriptions') {
+          this.fetchData(value)
+          value = 'Prescription'
+        }
       this.setState(prevState => ({
         eventValues: {
           ...prevState.eventValues,
           [field]: value
           }
         }))
-      console.log("===========")
-      console.log(this.state.eventValues.date)
-      // nil
-      console.log(field)
-      // date (name)
-      console.log(value)
-      // date (value)
-      console.log("===========")
-      console.log(this.state.eventValues)
-      console.log("===========")
     }
 
     handleSubmit = async e => {
-    // const { eventValues } = this.state;
-    console.log("***********")
-    console.log(...this.state.eventValues)
-    console.log("***********")
-    // const { data } =  await axios.post("/events/add", { ...eventValues }, { headers })
-    preventDefault()
+    const { eventValues } = this.state;
+    const { data } =  await axios.post("/events/add", { ...eventValues }, { headers })
     }
   
   render() {
@@ -78,13 +65,13 @@ export default class EventForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div>
           <label htmlFor="type">Type</label>
-            <select  onChange={this.handleChange}>
+            <select onChange={this.handleInputChange('type')} >
               {this.optionsArray(this.state.eventTypeOptions).map(option => option)}
             </select>
         </div>
         <div>
           <label htmlFor="name">Name</label>
-            <select>
+            <select onChange={this.handleInputChange('name')} >
               {this.state.eventTypeData.map(data => <option key={data.id} value={data.id}>{data.name}</option> )}
             </select>
         </div>

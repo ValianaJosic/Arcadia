@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
 export const headers = ReactOnRails.authenticityHeaders()
 
 export default class PrescriptionForm extends React.Component {
@@ -39,56 +38,56 @@ export default class PrescriptionForm extends React.Component {
   render() {
     let myObj = this.state.drug
     return(
-            <div>
-              <span>search for 0002-3238</span>
-              <div>
-                <input
-                type='search' 
-                id='ndcCode'
-                onChange = {this.handleInputChange('ndcQuery')}
-                placeholder='Search by NDC Code'
-                />
-                <span>
-                  <button className="button is-info" onClick={this.fetchDrugs}>
-                    Search
-                  </button>
-                </span>
-              </div>
+      <div>
+        <span>search for 0002-3238</span>
+        <div>
+          <input
+          type='search' 
+          id='ndcCode'
+          onChange = {this.handleInputChange('ndcQuery')}
+          placeholder='Search by NDC Code'
+          />
+          <span>
+            <button className="button is-info" onClick={this.fetchDrugs}>
+              Search
+            </button>
+          </span>
+        </div>
 
-              <div>
-                <form onSubmit={this.handleSubmit}>
-                  <div>
-                    <label htmlFor="brand">Brand Name</label>
-                    <input id="brand" type="text" value={myObj.brandName} readOnly/>
-                  </div>
-                  <div>
-                    <label htmlFor="brand">Generic Name</label>
-                    <input id="generic-name" type="text" value={myObj.genericName} readOnly/>
-                  </div>
-                  <div>
-                    <label htmlFor="brand">Dosage Form</label>
-                    <input id="dosage-form" type="text" value={myObj.dosageForm} readOnly/>
-                  </div>
-                  <div>
-                    <label htmlFor="brand">Product Type</label>
-                    <input id="product-type" type="text" value={myObj.productType} readOnly/>
-                  </div>
-                  <div>
-                    <label htmlFor="brand">Product Id</label>
-                    <input id="product-id" type="text" value={myObj.productID} readOnly/>
-                  </div>
-                  <div>
-                    <label htmlFor="brand">Product NDC</label>
-                    <input id="product-ndc" type="text" value={myObj.productNDC} readOnly/>
-                  </div>
-                  <div>
-                    <label htmlFor="notes">Notes</label>
-                    <input id="notes" onChange={this.handleInputChange('userNotes')} type="text" />
-                  </div>
-                    <button type="submit">Submit</button>
-                </form>
-              </div>
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <div>
+              <label htmlFor="brand">Brand Name</label>
+              <input id="brand" type="text" value={myObj.brandName} readOnly/>
             </div>
+            <div>
+              <label htmlFor="brand">Generic Name</label>
+              <input id="generic-name" type="text" value={myObj.genericName} readOnly/>
+            </div>
+            <div>
+              <label htmlFor="brand">Dosage Form</label>
+              <input id="dosage-form" type="text" value={myObj.dosageForm} readOnly/>
+            </div>
+            <div>
+              <label htmlFor="brand">Product Type</label>
+              <input id="product-type" type="text" value={myObj.productType} readOnly/>
+            </div>
+            <div>
+              <label htmlFor="brand">Product Id</label>
+              <input id="product-id" type="text" value={myObj.productID} readOnly/>
+            </div>
+            <div>
+              <label htmlFor="brand">Product NDC</label>
+              <input id="product-ndc" type="text" value={myObj.productNDC} readOnly/>
+            </div>
+            <div>
+              <label htmlFor="notes">Notes</label>
+              <input id="notes" onChange={this.handleInputChange('userNotes')} type="text" />
+            </div>
+              <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
       )
     }
   }
