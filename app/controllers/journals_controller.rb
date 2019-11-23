@@ -22,10 +22,3 @@ class JournalsController < ApplicationController
       params.require(:journal).permit(:title, :description)
     end
 end
-
-
-
-# @entry = Journal.new(params.require(:entry).permit(:title, :date, :text))
-
-# @entry.save
-# redirect_to journal_url
