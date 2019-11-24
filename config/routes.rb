@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :contacts, only: [:index, :create]
 
   resources :events, only: [:index, :create]
+
+  resources :calendars, only: [:index]
   
   resources :journals, only: [:index, :new, :create] do
     resources :journal_entries
