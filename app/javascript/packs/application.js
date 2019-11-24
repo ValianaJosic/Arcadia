@@ -22,5 +22,6 @@ import PrescriptionForm from '../bundles/Prescription/components/PrescriptionFor
 import PrescriptionList from '../bundles/Prescription/components/PrescriptionList';
 import Home from '../bundles/Home/components/Home';
 import EventForm from '../bundles/Event/components/EventForm';
+import SignUpForm from '../bundles/SignUpForm/SignUpForm';
  
-ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home}); 
+ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home, SignUpForm }); 
