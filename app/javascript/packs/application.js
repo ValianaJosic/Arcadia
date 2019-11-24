@@ -18,6 +18,8 @@ require("channels")
 
 import ReactOnRails from 'react-on-rails';
  
-import NDCSearch from '../bundles/NDCSearch/components/NDCSearch';
+import PrescriptionForm from '../bundles/Prescription/components/PrescriptionForm';
+import PrescriptionList from '../bundles/PrescriptionList/components/PrescriptionList';
+import EventForm from '../bundles/Event/components/EventForm';
  
-ReactOnRails.register({ NDCSearch });
+ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList});
