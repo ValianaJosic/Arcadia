@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Close button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Close-button" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <line x1="31.6153846" y1="12.3846154" x2="12.3846154" y2="31.6153846" id="Path-5" stroke="#200026"></line>
+            <line x1="13.1513283" y1="13.38" x2="32" y2="32" id="Path-6" stroke="#200026"></line>
+            <rect id="Rectangle" x="0" y="0" width="44" height="44"></rect>
+        </g>
+    </g>
+</svg>

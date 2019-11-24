@@ -1,21 +1,17 @@
 Rails.application.routes.draw do
-  get 'journal/index'
   devise_for :users
   
   root  'home#index'
-  
-  get   '/signupsurvey'       => 'signupsurvey#index'
-  
-  get   '/prescriptions'      => 'prescriptions#index' 
-  post  '/prescriptions/add'  => 'prescriptions#create'
 
-  post  '/addresponses'       =>  'addresponses#create'
+  resources :sign_up_survey, only: [:index]
 
-  get   '/contacts'           =>  'contacts#index'
-  post  '/contacts/add'       =>  'contacts#create'
-  
-  get   '/events'             =>  'events#index'
-  post  '/events/add'         =>  'events#create'
+  resources :prescriptions, only: [:index, :create]
+
+  resources :add_responses, only: [:create]
+
+  resources :contacts, only: [:index, :create]
+
+  resources :events, only: [:index, :create]
   
   resources :journals, only: [:index, :new, :create] do
     resources :journal_entries

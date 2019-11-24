@@ -9,7 +9,7 @@
 </div>
 
 
-<%= form_with url: '/addresponses' do |form| %>
+<%= form_with url: '/add_responses' do |form| %>
   <div class='questions'>
       <%= form.label @question_id, @question%>
       <%= form.text_field @question_id %>
@@ -17,3 +17,6 @@
   </div>
   <%= form.submit %>
 <% end %>
+<hr>
+<h1>React stuff begins here, use this one to get past this screen</h1>
+<%= react_component "SignUpForm" %>

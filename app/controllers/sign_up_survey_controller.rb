@@ -1,4 +1,5 @@
-class SignupsurveyController < ApplicationController
+class SignUpSurveyController < ApplicationController
+  skip_before_action :authenticate_user
 
   def index
     @survey       = Survey.first.name || ''
