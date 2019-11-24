@@ -8,8 +8,24 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <style>
+  main { 
+    width: 360px; 
+    height: 640px; 
+    border: 1px black solid;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  html {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  </style>
   <body>
       <%= render 'layouts/navbar' %>
-    <%= yield %>
+      <main>
+        <%= yield %>
+      </main>
   </body>
 </html>

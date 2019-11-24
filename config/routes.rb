@@ -13,8 +13,10 @@ Rails.application.routes.draw do
 
   get   '/contacts'           =>  'contacts#index'
   post  '/contacts/add'       =>  'contacts#create'
-
-  resources :events
+  
+  get   '/events'             =>  'events#index'
+  post  '/events/add'         =>  'events#create'
+  
   resources :journals, only: [:index, :new, :create] do
     resources :journal_entries
   end
