@@ -19,7 +19,7 @@ require("channels")
 import ReactOnRails from 'react-on-rails';
  
 import PrescriptionForm from '../bundles/Prescription/components/PrescriptionForm';
-import PrescriptionList from '../bundles/PrescriptionList/components/PrescriptionList';
+import PrescriptionList from '../bundles/Prescription/components/PrescriptionList';
 import EventForm from '../bundles/Event/components/EventForm';
  
 ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList});
