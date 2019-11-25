@@ -14,6 +14,12 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
   </head>
+  <%# Scroll bar hidden for mobile dev purposes only %>
+  <%# Do not remove this style %>
+  <style>
+    body::-webkit-scrollbar { width: 0 !important }
+  </style>
+  <%# Do not remove this style %>
   <body>
       <main>
         <%= yield %>
