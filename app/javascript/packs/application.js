@@ -24,4 +24,5 @@ import Home from '../bundles/Home/components/Home';
 import EventForm from '../bundles/Event/components/EventForm';
 import SignUpForm from '../bundles/SignUpForm/SignUpForm';
  
-ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home, SignUpForm }); 
+ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home, SignUpForm });
+Notification.requestPermission().then(function (result) {});
