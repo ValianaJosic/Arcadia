@@ -32,7 +32,7 @@ export default class PrescriptionForm extends React.Component {
 
   handleSubmit = async e => {
     const { drug, userNotes } = this.state;
-    const { data } =  await axios.post("/prescriptions/add", { ...drug, userNotes }, { headers })
+    const { data } =  await axios.post("prescriptions#create", { ...drug, userNotes }, { headers })
   };
 
   render() {
