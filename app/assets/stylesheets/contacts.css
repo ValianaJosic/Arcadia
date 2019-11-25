@@ -1,0 +1,68 @@
+.contacts-body{
+  background-color: #FFF5E9;
+}
+
+.contacts-top{
+  display: flex;
+  justify-content: center;
+}
+
+.contacts-header{
+ 	color: #200026;	
+  font-family:  'Roboto', sans-serif;	
+  font-size: 14px;	
+  font-weight: bold;	
+  line-height: 17px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-left: 40px;
+
+}
+
+.contacts-close{
+  border: none;
+  font-size: 10px;
+  background-color: #FFF5E9;
+  float: right;
+  margin: 0;
+  
+}
+
+.contacts-table{
+text-align: center;
+
+}
+
+.contacts-label{
+  height: 19px;	
+  width: 44px;	
+  color: #200026;	
+  font-family: Avenir;	
+  font-size: 14px;	
+  font-weight: 300;	
+  line-height: 19px;
+  padding-left: 25px ;
+}
+
+.contacts-name-form{
+  box-sizing: border-box;	
+  height: 40px;	
+  width: 250px;	
+  border: 1px solid rgba(132,75,143,0.55);	
+  border-radius: 2px;	
+  background-color: #FFFFFF;
+  
+}
+
+.contacts-btn{
+  height: 78px;	
+  width: 300px;	
+  background-color: #844B8F;
+  color: #FFFFFF;	
+  font-family: Avenir;	
+  font-size: 48px;	
+  font-weight: 300;	
+  line-height: 66px;
+}
+
