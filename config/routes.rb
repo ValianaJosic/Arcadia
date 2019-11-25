@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :sign_up_survey, only: [:index]
 
+  resources :agendas, only: [:index]
+
   resources :prescriptions, only: [:index, :create]
 
   resources :add_responses, only: [:create]
