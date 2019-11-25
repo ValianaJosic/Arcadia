@@ -1,4 +1,4 @@
-#menuToggle {
+#menuToggle a {
     text-decoration: none;
     color: #1E1E23;
     opacity: 1;
@@ -6,6 +6,10 @@
     font-size: 1.5em;
     font-weight: 400;
     transition: 200ms;
+}
+
+#menuToggle a:hover {
+    opacity: 0.5;
 }
 
 #menuToggle li {
