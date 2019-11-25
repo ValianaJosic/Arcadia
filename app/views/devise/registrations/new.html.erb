@@ -13,12 +13,17 @@
   <div class="field field-password">
     <%= f.password_field :password, autocomplete: "new-password", :class => 'sign-up-field password-sign-up', placeholder: "Password" %>
   </div>
+
+  <div class="feild field-password">
+  <%= f.password_field :password_confirmation, autocomplete: "confirm-password", :class => 'sign-up-field password-sign-up', placeholder: "Confirm Password"  %>
+  </div>
   <div class="consent">
     <p class= "rectangle"></p><p class="sign-up-confirm">I confirm that I have read, consent and agree to Arcadia’s <u>User Agreement</u> and <u>Privacy Policy</u>.</p>
   </div>
   <div class="actions sign-up">
     <%= f.submit "Sign up", :class => 'sign_up-btn'  %>
   </div>
+  <a href="/users/sign_in" class="sign-up-skip">Already have an account</a>
   <div class="sign-up-hr"></div>
   <div class="alt-sign-up">
   <p class="or-sign-up">or sign up with</p>

@@ -2,7 +2,7 @@
   background-color: #FFF5E9;
   background-image: url(https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/sign-up-img.png);
   background-repeat: no-repeat;
-  background-position: right 215px top -90px;
+  background-position: right 215px top -110px;
 }
 
 .sign-up-close {
@@ -16,12 +16,13 @@
 }
 
 .sign-up-header {
-  height: 44px;
-  width: 340px;
-  color: #200026;
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  line-height: 36px;
+ 
+  height: 44px;	
+  width: 340px;	
+  color: #200026;	
+  font-family:   'Roboto', sans-serif;	
+  font-size: 30px;	
+  line-height: 25px;	
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -70,8 +71,13 @@
   padding-top: 0;
 }
 
-.sign-up-field {
-  height: 60px;
+.sign-up-skip{
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-field  {	
+  height: 60px;	
   width: 301px;
   border: none;
   border-bottom: 1px solid #844B

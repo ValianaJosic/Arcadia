@@ -10,44 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Ramabhadra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ab06b5d6e3.js" crossorigin="anonymous"></script>
-
     <meta name="viewport" content="width=device-width">
- 
     <meta charset="utf-8">
-
     <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
-
   </head>
-  <style>
-  main { 
-    width: 360px; 
-    height: 640px; 
-    border: 1px black solid;
-    margin: auto;
-    box-sizing: border-box;
-  }
-  html {
-    padding-top: 65px;
-    padding-bottom: 65px;
-  }
-  </style>
   <body>
-      <%= render 'layouts/navbar' %>
-
-            <div id="menuToggle">
-              <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-            <ul id="menu">
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Sign Out</a></li>
-            </ul>
-           </div>
-           
       <main>
         <%= yield %>
       </main>
