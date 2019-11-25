@@ -87,6 +87,7 @@ end
   User.all.each do |u|
     Prescription.create(
       user: u,
+      name: Faker::ProgrammingLanguage.name
     )
   end
 end
