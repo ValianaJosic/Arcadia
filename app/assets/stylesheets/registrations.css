@@ -2,7 +2,7 @@
   background-color: #FFF5E9;
   background-image: url(sign-up-img.png);
   background-repeat: no-repeat;
-  background-position: right 215px top -90px;
+  background-position: right 215px top -110px;
 }
 
 .sign-up-close{
@@ -23,7 +23,7 @@
   color: #200026;	
   font-family:   'Roboto', sans-serif;	
   font-size: 30px;	
-  line-height: 36px;	
+  line-height: 25px;	
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -55,7 +55,6 @@
   font-weight: 300;	
   line-height: 25px;
   background-color: #FFF5E9;
-  
 }
 
 .password-sign-up{
