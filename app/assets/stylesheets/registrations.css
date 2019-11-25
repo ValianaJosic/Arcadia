@@ -73,6 +73,10 @@
  padding-top: 0;
 }
 
+.sign-up-skip{
+  display: flex;
+  justify-content: center;
+}
 
 .sign-up-field  {	
   height: 60px;	
