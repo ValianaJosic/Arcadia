@@ -23,3 +23,5 @@ import PrescriptionList from '../bundles/PrescriptionList/components/Prescriptio
 import EventForm from '../bundles/Event/components/EventForm';
  
 ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList});
+
+Notification.requestPermission().then(function (result) {})
