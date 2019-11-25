@@ -15,6 +15,10 @@
   background-color: rgba(255, 248, 240, 0.87);
 }
 
+.bkgrd-cr-periwinkle {
+  background-color:  rgba(241, 172, 254, 0.55)
+}
+
 /* Font Colors */
 .ft-cr-mixed-berries {
   color:  #780D8D
@@ -36,17 +40,48 @@
   color: #b142c7
 }
 
+.ft-cr-pure-white {
+  color: #ffff
+}
+
 /* Fonts */
-/* Same as Helvetica Neue */
+/* Same as Helvetica Neue Bold*/
+.ft-ramabhadra-12 {
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 12px;
+}
+  
 .ft-ramabhadra-24 {
   font-family: 'Ramabhadra', sans-serif;
   font-size: 24px;
 }
 
+.ft-ramabhadra-36 {
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 36px;
+}
+
+/* Same as Helvetica Neue regular*/
+.ft-arimo-12 {
+  font-family: 'Srimo', sans-serif;
+  font-size: 12px;
+}
+
+.ft-arimo-36 {
+  font-family: 'Srimo', sans-serif;
+  font-size: 36px;
+}
+
+
 /* Same as Avenir Next */
-.ft-nunito-20 {
+.ft-nunito-10 {
   font-family: 'Nunito', sans-serif;
-  font-size: 20px;
+  font-size: 10px;
+}
+
+.ft-nunito-12 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
 }
 
 .ft-nunito-18 {
@@ -54,7 +89,7 @@
   font-size: 18px;
 }
 
-.ft-nunito-10 {
+.ft-nunito-20 {
   font-family: 'Nunito', sans-serif;
-  font-size: 10px;
+  font-size: 20px;
 }
