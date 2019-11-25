@@ -1,6 +1,6 @@
 .sign-up-body{
   background-color: #FFF5E9;
-  background-image: url(sign-up-img.png);
+  background-image: url(https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/sign-up-img.png);
   background-repeat: no-repeat;
   background-position: right 215px top -110px;
 }
@@ -73,6 +73,10 @@
  padding-top: 0;
 }
 
+.sign-up-skip{
+  display: flex;
+  justify-content: center;
+}
 
 .sign-up-field  {	
   height: 60px;	
