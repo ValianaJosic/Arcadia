@@ -57,7 +57,7 @@ export default class EventForm extends React.Component {
 
     handleSubmit = async e => {
     const { eventValues } = this.state;
-    const { data } =  await axios.post("/events/add", { ...eventValues }, { headers })
+    const { data } =  await axios.post("events#create", { ...eventValues }, { headers })
     }
   
   render() {
