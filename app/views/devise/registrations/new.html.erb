@@ -1,24 +1,34 @@
 <div class="sign-up-body">  
-<button class="sign-up-close"><img src='/assets/close.svg' alt="x"/></button>
+<button class="sign-up-close"><img src='https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg' alt="x"/></button>
 <h2 class="sign-up-header">Sign up</h2>
 <h2 class="sign-up-text">Just by entering your email and password.</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field field-email">
+  <div class="field field-email email-div">
     <%= f.email_field :email,  autocomplete: "email", :class => 'sign-up-field email-sign-up', placeholder: "Email" %>
   </div>
 
-  <div class="field field-password">
+  <div class="field field-password password-div">
     <%= f.password_field :password, autocomplete: "new-password", :class => 'sign-up-field password-sign-up', placeholder: "Password" %>
   </div>
+
+  <div class="sign-up-show">Show</div>
+
+  <div class="feild field-password password-confirm-div">
+  <%= f.password_field :password_confirmation, autocomplete: "confirm-password", :class => 'sign-up-field password-sign-up', placeholder: "Confirm Password"%>
+  </div>
+  
+  <div class="sign-up-show-confirm">Show</div>
+  
   <div class="consent">
     <p class= "rectangle"></p><p class="sign-up-confirm">I confirm that I have read, consent and agree to Arcadia’s <u>User Agreement</u> and <u>Privacy Policy</u>.</p>
   </div>
   <div class="actions sign-up">
     <%= f.submit "Sign up", :class => 'sign_up-btn'  %>
   </div>
+  <a href="/users/sign_in" class="sign-up-skip">Already have an account</a>
   <div class="sign-up-hr"></div>
   <div class="alt-sign-up">
   <p class="or-sign-up">or sign up with</p>
@@ -27,6 +37,25 @@
   </div>
   <% end %>
   </div>
+
+  <script>
+  const show = document.querySelector('.sign-up-show')
+  const confirmShow = document.querySelector('.sign-up-show-confirm')
+  const passInput = document.querySelector('#user_password')
+  const passConfirm = document.querySelector('#user_password_confirmation')
+  const handleHitMe = () => {
+    console.log(passInput.type)
+    if (passInput.type === "password") {
+      passInput.type = "text";
+      passConfirm.type = "text";
+    } else {
+      passInput.type = "password";
+      passConfirm.type = "password";
+    } 
+  }
+  show.addEventListener('click', handleHitMe)
+  confirmShow.addEventListener('click', handleHitMe)
+  </script>
 
 <%= render "devise/shared/links" %>
 

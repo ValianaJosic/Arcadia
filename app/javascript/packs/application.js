@@ -15,7 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+ 
 import ReactOnRails from 'react-on-rails';
  
 import PrescriptionForm from '../bundles/Prescription/components/PrescriptionForm';

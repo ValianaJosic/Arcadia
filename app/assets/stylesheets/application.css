@@ -14,6 +14,12 @@
  *= require_self
  */
 
- 
-  
+ body {
+   margin: 0px;
+ }
+
+ a {
+  color: inherit;
+  text-decoration: none;
+ }
  
