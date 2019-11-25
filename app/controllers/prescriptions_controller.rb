@@ -1,11 +1,7 @@
 class PrescriptionsController < ApplicationController
  
   def index  
-<<<<<<< HEAD
-    @prescription = current_user.prescriptions.all
-=======
     @prescriptions = current_user.prescriptions.all
->>>>>>> master
     respond_to do |format|
       format.html
       format.json do
