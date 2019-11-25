@@ -1,1 +1,19 @@
-<%= react_component("Home") %>
+<div id="menuToggle">
+  <input type="checkbox" />
+  <span></span>
+  <span></span>
+  <span></span>
+  <ul id="menu">
+    <li><%= link_to "Profile",profiles_url %></li>
+    <li><%= link_to "Journal",journals_url %></li>
+    <li><%= link_to "Events",events_url %></li>
+    <li><%= link_to "Contacts",contacts_url %></li>
+    <li><%= link_to "Medications",prescriptions_url %></li>
+    <li><%= link_to "Notifications",alerts_url %></li>
+    <li><%= link_to "Contact Us",contact_us_url %></li>
+    <li><%= link_to "Sign Out",destroy_user_session_url,method: :delete %></li>
+  </ul>
+</div>
+<div>
+  <%= react_component("Home") %>
+</div>

@@ -15,7 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+ 
 import ReactOnRails from 'react-on-rails';
  
 import PrescriptionForm from '../bundles/Prescription/components/PrescriptionForm';
@@ -23,6 +23,7 @@ import PrescriptionList from '../bundles/Prescription/components/PrescriptionLis
 import Home from '../bundles/Home/components/Home';
 import EventForm from '../bundles/Event/components/EventForm';
 import SignUpForm from '../bundles/SignUpForm/SignUpForm';
+import Agenda from '../bundles/Agenda/components/Agenda'
  
-ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home, SignUpForm });
+ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home, SignUpForm, Agenda });
 Notification.requestPermission().then(function (result) {});
