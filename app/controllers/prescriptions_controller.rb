@@ -1,6 +1,7 @@
 class PrescriptionsController < ApplicationController
  
   def index  
+    @prescription = current_user.prescriptions.all
     respond_to do |format|
       format.html
       format.json do
