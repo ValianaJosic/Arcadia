@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root  'home#index'
   
   resources :profiles, only: [:index]
-  resources :journals, only: [:index, :new, :create] do
+  resources :journals do
     resources :journal_entries
   end
   resources :events, only: [:index, :create]

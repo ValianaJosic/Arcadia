@@ -2,6 +2,8 @@
   <header class="journal-header">
       <div class="journal-placeholder">
       </div>
+
+
     <nav class="journal-nav">
       <div class="journal-nav-buttons">
         <div id="journal-nav-button1">
@@ -16,35 +18,29 @@
       </div>
     <nav>
   </header>
+  <% @journal.each do |journal| %>
   <main class="journal-entry-viewer">
     <div class="journal-entry-container">
       <div class="journal-entry-info">
         <div class="info-box">
-          First time using app sfsdfsfsd
+          <%= journal.title %>
         </div>
         <div class="info-box">
-          <%= Time.now.strftime("%m/%d/%Y") %>
+          <%= journal.created_at %>
         </div>
         <div class="info-box">
           <i class="fal fa-folder-open"></i>
         </div>
       </div>
       <div class="journal-entry-description">
-       app/controllers/journals_controller.erb app/views/journals/index.html.erb app/views/journals/new.html.erb
-      <div>
+        <%= journal.description %>
     </div>
   </main>
-
-
-
-
-  <div>
-
+  <% end %>
+</body>
 
   <%= link_to '➕ New Journal Entry', 'journals/new' %>
 
-
-  <p>I am app/views/journals/index.html.erb</p>
 
   <ul>
     <li>
@@ -53,5 +49,4 @@
   <ul>
   </div>
 
-</body>
 
