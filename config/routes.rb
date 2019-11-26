@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :calendars, only: [:index]
   resources :sign_up_survey, only: [:index]
   resources :add_responses, only: [:create]
+  resources :welcomes, only: [:index]
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
