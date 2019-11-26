@@ -1,22 +1,7 @@
-<style>
-  .questions {
-    margin-top: 25px;
-  }
-</style>
+<%# #=============================================
+#DO NOT DELETE THIS FILE
+#Save as reference for future functionality
+#============================================= %>
 
-<div>
-  <h1><%= @survey %></h1>
-</div>
-
-
-<%= form_with url: '/add_responses' do |form| %>
-  <div class='questions'>
-      <%= form.label @question_id, @question%>
-      <%= form.text_field @question_id %>
-      <%= @question_id %>
-  </div>
-  <%= form.submit %>
-<% end %>
-<hr>
-<h1>React stuff begins here, use this one to get past this screen</h1>
+<h1>User Sign Up Survey</h1>
 <%= react_component "SignUpForm" %>

@@ -1,3 +1,8 @@
+// #=============================================
+// #DO NOT DELETE THIS FILE
+// #Save as reference for future functionality
+// #=============================================
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import { schema } from './SignUpForm.schema';
@@ -14,7 +19,7 @@ class SignUpForm extends Component {
   handleFormSubmit = async e => {
     e.preventDefault();
     const { activeForm, ...responses } = this.state;
-    await axios.post('/add_responses', { responses }, { headers })
+    await axios.post('sign_up_survey#create', { responses }, { headers })
     Turbolinks.visit('/users/sign_up')
   }
 

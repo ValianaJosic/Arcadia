@@ -16,32 +16,44 @@
 }
 
 .bkgrd-cr-periwinkle {
-  background-color:  rgba(241, 172, 254, 0.55)
+  background-color:  rgba(241, 172, 254, 0.55);
+}
+
+.bkgrd-cr-burple {
+  background-color: rgba(32, 0, 38, 0.81);
 }
 
 /* Font Colors */
 .ft-cr-mixed-berries {
-  color:  #780D8D
+  color:  #780D8D;
 }
 
 .ft-cr-periwinkle {
-  color:  rgba(241, 172, 254, 0.55)
+  color:  rgba(241, 172, 254, 0.55);
 }
 
 .ft-cr-pleasent-purple {
-  color:  #8D5796
+  color:  #8D5796;
 }
 
 .ft-cr-barney {
-  color: #844b8f
+  color: #844b8f;
 }
 
 .ft-cr-blurple-berry {
-  color: #b142c7
+  color: #b142c7;
 }
 
 .ft-cr-pure-white {
-  color: #ffff
+  color: #ffff;
+}
+
+.ft-cr-deep-plum {
+  color: #200026;
+}
+
+.ft-cr-snow {
+  color: #DAF3FE;
 }
 
 /* Fonts */
@@ -92,4 +104,9 @@
 .ft-nunito-20 {
   font-family: 'Nunito', sans-serif;
   font-size: 20px;
+}
+
+.ft-nunito-24 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
 }
