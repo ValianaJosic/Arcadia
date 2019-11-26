@@ -28,7 +28,7 @@
   <div class="actions sign-up">
     <%= f.submit "Sign up", :class => 'sign_up-btn'  %>
   </div>
-  <a href="/users/sign_in" class="sign-up-skip">Already have an account</a>
+  <div class="sign-up-skip"><%= link_to "Already have an account", new_user_session_path %></div>
   <div class="sign-up-hr"></div>
   <div class="alt-sign-up">
   <p class="or-sign-up">or sign up with</p>
@@ -57,5 +57,5 @@
   confirmShow.addEventListener('click', handleHitMe)
   </script>
 
-<%= render "devise/shared/links" %>
+
 
