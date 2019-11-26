@@ -11,16 +11,37 @@
           <h1>Journal</h1>
         </div>
         <div id="journal-nav-button3">
-          <i class="far fa-trash-alt" id="trash-icon"></i>
+          <i class="far fa-trash-alt" id="trash-icon" alt="trash icon"></i>
         </div>
       </div>
     <nav>
   </header>
+  <main class="journal-entry-viewer">
+    <div class="journal-entry-container">
+      <div class="journal-entry-info">
+        <div class="journal-entry-title">
+          <p>Single Entry<p>
+        </div>
+        <div class="joural-entry-date">
+          <%= Time.now.strftime("%m/%d/%Y") %>
+        </div>
+        <div class="joural-entry-icon">
+          <i class="fal fa-folder-open"></i>
+        </div>
+      </div>
+      <div class="journal-entry-description">
+          app/controllers/journals_controller.erb <br/>
+          app/views/journals/index.html.erb <br/>
+          app/views/journals/new.html.erb <br/>
+      <div>
+    </div>
+  </main>
+
 
 
 
   <div>
-    <h2>This place will show you your Entries</h2>
+
 
   <%= link_to '➕ New Journal Entry', 'journals/new' %>
 
@@ -44,7 +65,7 @@
     <i class="far fa-trash-alt"></i>
     </li>
     <li>
-    <i class="fas fa-folder-open"></i>
+    <i class="fal fa-folder-open"></i>
     </li>
     <li>
     <i class="far fa-paperclip"></i>
