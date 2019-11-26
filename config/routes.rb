@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:index, :create]
   resources :prescriptions, only: [:index, :create]
   resources :alerts, only: [:index]
-  resources :contact_us, only: [:index]
+  resources :settings, only: [:index]
   resources :agendas, only: [:index] 
   resources :calendars, only: [:index]
   resources :sign_up_survey, only: [:index]

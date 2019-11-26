@@ -1,19 +1,25 @@
-<div id="menuToggle">
-  <input type="checkbox" />
-  <span></span>
-  <span></span>
-  <span></span>
-  <ul id="menu">
-    <li><%= link_to "Profile",profiles_url %></li>
-    <li><%= link_to "Journal",journals_url %></li>
-    <li><%= link_to "Events",events_url %></li>
-    <li><%= link_to "Contacts",contacts_url %></li>
-    <li><%= link_to "Medications",prescriptions_url %></li>
-    <li><%= link_to "Notifications",alerts_url %></li>
-    <li><%= link_to "Contact Us",contact_us_url %></li>
-    <li><%= link_to "Sign Out",destroy_user_session_url,method: :delete %></li>
-  </ul>
+<div id='home'>
+  <div id='home-div1'>
+    <div id='home-nav-top' class='bkgrd-cr-vanilla'></div>
+    <div id='home-nav-bottom' class='bkgrd-cr-taupe'>
+      <span onclick='openNav()'> 
+        <i class="fas fa-ellipsis-v home-nav-bottom-icon"></i>
+      </span>
+    </div>
+  </div>
+  <div id='home-div2'>
+    <%= react_component("Home") %>
+  </div>
 </div>
-<div>
-  <%= react_component("Home") %>
-</div>
+
+<%= render 'home/nav' %>
+
+<script>
+  function openNav() {
+  document.getElementById('home-nav').style.width = '170px'
+  }
+
+  function closeNav() {
+  document.getElementById('home-nav').style.width = '0%';
+  }
+</script>
