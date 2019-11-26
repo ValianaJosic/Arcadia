@@ -14,14 +14,10 @@ Rails.application.routes.draw do
   resources :settings, only: [:index]
   resources :agendas, only: [:index] 
   resources :calendars, only: [:index]
-<<<<<<< HEAD
   resources :sign_up_survey, only: [:index, :create]
   resources :welcome_trail, only: [:index]
-=======
   resources :sign_up_survey, only: [:index]
-  resources :add_responses, only: [:create]
   resources :welcomes, only: [:index]
->>>>>>> enhancement-92-loading-page
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
