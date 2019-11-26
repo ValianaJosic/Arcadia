@@ -23,7 +23,7 @@ import PrescriptionList from '../bundles/Prescription/components/PrescriptionLis
 import Home from '../bundles/Home/components/Home';
 import EventForm from '../bundles/Event/components/EventForm';
 import SignUpForm from '../bundles/SignUpForm/SignUpForm';
-import Agenda from '../bundles/Agenda/components/Agenda'
-import Calendar from '../bundles/Calendar/components/Calendar'
+import Agenda from '../bundles/Agenda/components/Agenda';
+import Calendar from '../bundles/Calendar/components/Calendar';
  
 ReactOnRails.register({ PrescriptionForm, EventForm, PrescriptionList, Home, SignUpForm, Agenda, Calendar }); 
