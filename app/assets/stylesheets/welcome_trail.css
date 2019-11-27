@@ -144,14 +144,14 @@
     justify-content: center;
   }
 
-.wait-div{
+.trail-wait-div{
   padding-top: 25px;
 }  
 
-.started-div{
+.trail-started-div{
   padding-top: 20px;
 }
 
-.carousel-item{
+.trail-carousel{
   background-color: #FFF5E9;
 }
