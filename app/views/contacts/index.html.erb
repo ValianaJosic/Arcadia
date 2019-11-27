@@ -1,8 +1,11 @@
-<h1>User Contacts Page</h1>
+<body class="contacts-background">
+<h1 class="contacts-title">Important Contacts</h1>
+<%= stylesheet_link_tag "contacts.css" %>
+
 <%= form_with url: 'contacts#add' do |form| %>
     <div class="row">
     <div class="form-group col-md-8">
-      <%= form.label :name %>
+      <%= form.label :name, class: "flexit"  %>
       <%= form.text_field :name,
       autocomplete: "off", autofocus: true, class: "form-control" %>
     </div>
@@ -105,6 +108,7 @@
     <% end %>
   </tbody>
 </table>
+</body>
  
 
  

@@ -1,23 +1,34 @@
-/*  
- {
-  height: 100%;
- } */
+
  
 .welcome-title {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Ramabhadra';
   color: whitesmoke;
-  font-size: large;
+  font-size: 42px;
+  text-align: center;
+  opacity: 0.80;
+  position: relative;
+  margin-top: 40vh;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(4px 4px 4px #312d2d);
+
 }
 
- .welcome {
-  width: 100vh;
-  height: 100vh;
-  margin: 0;
- }
+.welcome-enter {
+  font-family: 'Ramabhadra';
+  color: whitesmoke;
+  font-size: large;
+  text-align: center;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
  .gradient {
   display: block;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   background: radial-gradient(220% 105% at top center, #151338 10%, #4F2854 40%, #EB7ECD 65%, #F4D6A0);
@@ -27,16 +38,6 @@
    height: 100vh;
  }
  
- /* .container .text{
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  margin: -10px -75px 0 0;
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
- } */
  
  .stars {
 z-index: 10;

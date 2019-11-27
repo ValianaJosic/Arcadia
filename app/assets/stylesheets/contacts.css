@@ -1,0 +1,22 @@
+.contacts-background {
+  background-color: #fff5e9;
+}
+
+.contacts-title {
+  color: #200026;
+  font-family: "Ramabhadra";
+  font-size: 22px;
+  text-align: center;
+}
+
+.row {
+  color: #200026;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+}
+
+.flexit {
+  display: inline;
+  flex-direction: column;
+  justify-content: space-between;
+}
