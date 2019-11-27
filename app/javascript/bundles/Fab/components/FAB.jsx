@@ -12,4 +12,3 @@ export default class FAB extends React.Component {
     )
   }
 }
-
