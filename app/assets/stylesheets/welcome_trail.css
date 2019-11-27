@@ -1,0 +1,157 @@
+.trail-status-bar{
+  height: 24px;	
+  background-color: #FFEFDC;
+  margin: 0;
+}
+
+.trail-progress-bar{
+  background-color: #FFF5E9; 
+  height: 48px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.trail-oval-prpl{
+  height: 14px;	
+  width: 14px;	
+  background-color: #844B8F;
+  border-radius: 100%;
+}
+
+.trail-oval{
+  height: 14px;	
+  width: 14px;	
+  background-color: #D8D8D8;
+  border-radius: 100%;
+}
+
+.trail-slide{
+  height: 240.59px;	
+}
+
+.trail-text-1{
+  height: 87px;	
+  width: 220px;	
+  color: #200026;	
+  font-family: Avenir;	
+  font-size: 21px;	
+  font-weight: 300;	
+  line-height: 29px;	
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 90px;
+  box-sizing: border-box;	
+  font-family: 'Roboto', sans-serif;
+}
+
+.trail-text-2{
+  height: 87px;	
+  width: 220px;	
+  color: #200026;	
+  font-family: Avenir;	
+  font-size: 21px;	
+  font-weight: 300;	
+  line-height: 29px;	
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  box-sizing: border-box;	
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.trail-text-3{
+  height: 87px;	
+  width: 220px;	
+  color: #200026;	
+  font-family: Avenir;	
+  font-size: 21px;	
+  font-weight: 300;	
+  line-height: 29px;	
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  box-sizing: border-box;	
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.trail-line{
+  height: 1px;	
+  width: 360vw;	
+  border: 0.5px solid #FEF7EF;	
+  box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.5);
+  margin-top: 40px;
+}
+
+.trail-skip-btn{
+  height: 44px;	
+  width: 220px;
+  background-color: #FFF5E9;
+  opacity: 0.38;	
+  color: #712090;	
+  font-family: Helvetica;	
+  font-size: 14px;	
+  line-height: 17px;	
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border:none;
+
+}
+
+.trail-btn-div{
+  padding-top: 50px;
+}
+
+.trail-body {
+  background-color: #FFF5E9;
+  }
+  
+  .trail-welcome{
+    height: 112px;	
+    width: 342px;	
+    color: #200026;	
+    font-family: "Helvetica Neue";	
+    font-size: 48px;	
+    line-height: 57px;	
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  .trail-started{
+    color: #200026;	
+    font-family: 
+    Helvetica;	
+    font-size: 21px;
+    line-height: 25px;	
+    text-align: center;
+    height: 45px;	
+    width: 220px;	
+    border-radius: 6px;	
+    background-color: #ECCFF7;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+.wait-div{
+  padding-top: 25px;
+}  
+
+.started-div{
+  padding-top: 20px;
+}
+
+.carousel-item{
+  background-color: #FFF5E9;
+}
