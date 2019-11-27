@@ -1,34 +1,113 @@
-<%= react_component("Calendar")%>
-<%# 
-<div class="month">
-  <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>August<br><span style="font-size:18px">2017</span></li>
-  </ul>
-</div>
+<%= react_component("Calendar") %>
 
-<ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
-</ul>
-
-<ul class="days">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  ...etc
-</ul> %>
+<%# <main>
+  <div class="device"> %>
+  <%# <div id=encapsulation>
+    <header>
+      <div class="header-bar"></div>
+      <div class="header-title">
+        <h1>ARCADIA IVF SCHEDULER</h1>
+      </div>
+      <div class="header-weekdays">
+        <span>sun</span>
+        <span>mon</span>
+        <span>tue</span>
+        <span>wed</span>
+        <span>thu</span>
+        <span>fri</span>
+        <span>sat</span>
+      </div>
+    </header>
+    <section>
+        <h2 class="month">December</h2>
+        <form>
+          <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="vacation" />
+          <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="walk" />
+          <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="fishing" />
+          <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="weekend" />
+          <input type="radio" name="calendar-label-bg" id="new" class="calendar-label-bg">
+          <div class="calendar">
+            <input type="checkbox" name="" id="" class="day previous-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day current-month" />
+            <input type="checkbox" name="" id="" class="day next-month" />
+            <input type="checkbox" name="" id="" class="day next-month" />
+            <input type="checkbox" name="" id="" class="day next-month" />
+            <div class="calendar-labels">
+              <label for="vacation"><span>Appointment</span></label>
+              <label for="walk"><span>Pill</span></label>
+              <label for="fishing"><span>Injection</span></label>
+              <label for="weekend"><span>Counseling</span></label>
+              <label for="new" class="full"><input type="text" placeholder="Add new task"></label>
+              <label class="reset">
+                <input type="reset" value="Reset"/>
+              </label>
+            </div>
+          </div>
+        </form>
+        <h2 class="month">January</h2>
+        <div class="calendar inactive">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+          <input type="checkbox" name="" id="" class="day next-month">
+        </div>
+    </section>
+    </div> %>
+  <%# </div>
+</main> %>

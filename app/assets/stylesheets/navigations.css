@@ -1,0 +1,12 @@
+.NavigationPane {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.Navigation-Section {
+    display: flex;
+    flex-direction: row;
+}
