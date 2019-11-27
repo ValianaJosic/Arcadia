@@ -26,8 +26,8 @@ color:  rgba(32, 0, 38, 0.81);
 
 .Navigation-Buttons i{
 
-    width: 125px;
-    height: 125px;
+    width: 115px;
+    height: 115px;
     background-color: #BB98BA;
     border-radius: 50%;
 
@@ -35,6 +35,8 @@ color:  rgba(32, 0, 38, 0.81);
     justify-content: center;
     align-content: center;
     align-items: center;
+
+    margin: 7px; 
 }
 
 .Navigation-Header {
