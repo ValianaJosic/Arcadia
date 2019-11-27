@@ -63,4 +63,5 @@ Rails.application.configure do
 
 
   
+  config.hosts << "8fd3dd0a.ngrok.io"
 end
