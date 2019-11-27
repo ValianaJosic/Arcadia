@@ -4,9 +4,31 @@
     height: 100vh;
     justify-content: center;
     text-align: center;
+    background-color: #fff8f0;
 }
 
 .Navigation-Section {
     display: flex;
     flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color:  rgba(32, 0, 38, 0.81);
+
+}
+
+.Navigation-Section i{
+
+font-size: 80px;
+color:  rgba(32, 0, 38, 0.81);
+
+}
+
+.Navigation-Buttons i{
+
+    width: 150px;
+    height: 150px;
+    background-color: #BB98BA;
+    border-radius: 50%;
+    /* float: left; */
+
 }
