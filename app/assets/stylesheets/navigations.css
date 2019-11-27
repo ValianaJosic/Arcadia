@@ -5,6 +5,7 @@
     justify-content: center;
     text-align: center;
     background-color: #fff8f0;
+    font-family: 'Ramabhadra', sans-serif;
 }
 
 .Navigation-Section {
@@ -25,10 +26,19 @@ color:  rgba(32, 0, 38, 0.81);
 
 .Navigation-Buttons i{
 
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     background-color: #BB98BA;
     border-radius: 50%;
-    /* float: left; */
 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.Navigation-Header {
+
+    font-family: 'Ramabhadra', sans-serif;
+    color:  rgba(32, 0, 38, 0.81);
 }
