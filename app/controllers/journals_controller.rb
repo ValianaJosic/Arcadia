@@ -25,6 +25,18 @@ class JournalsController < ApplicationController
     redirect_to journals_url
   end
 
+  def destroy
+    @journal.destroy
+    respond_to do |format|
+      format.html do
+        redirect_back fallback_location: root_url, notice: "journal entry successfully destroyed"
+      end
+      format.json do
+        render json: @journal
+      end
+    end
+  end
+
   private
     def journal_params
       params.require(:journal).permit(:title, :description)

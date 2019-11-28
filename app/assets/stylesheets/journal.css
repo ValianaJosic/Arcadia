@@ -1,3 +1,5 @@
+/* This is for everything that shows up at the top of the page. */
+
 .journal-header {
   margin: 0;
   padding: 0;
@@ -7,13 +9,21 @@
 .journal-placeholder {
   background-color: #FFEFDC ;
   height: 24px;
-  width: 100vw;
+  width: 100vw2;
   box-sizing: border-box;
 }
 
 .journal-nav {
   font-family: Srimo, sans-serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.journal-nav-two {
+  font-family:Srimo, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
   margin: 0;
   padding: 0;
 }
@@ -53,6 +63,7 @@
   font-size: 24px;
 }
 
+/* This is for returning the smaller render of an entry. */
 
 .journal-entry-container {
   margin: 5px 0px;
@@ -123,3 +134,64 @@
   font-size: 16px;
   line-height: 22px;
 }
+
+/* This is for making a new entry. */
+
+.entry-container {
+  box-sizing: border-box;
+  padding: 19px;
+  display:flex;
+  flex-direction: column;
+  min-height: 560px;
+}
+
+.entry-item {
+  justify-content: center;
+}
+
+.entry-item.info-box:nth-child(2) {
+  min-height: 550px;
+}
+
+.entry-title{
+  border: none;
+  font-family: Srimo;
+  margin-left:auto;
+  margin-right:auto;
+  min-width: 340px;
+  background: #FFF8F0;
+  text-shadow: 1px 1px 1px #FFF;
+  font-size: 18px;
+  color: rgba(132,75,143,0.55);
+  letter-spacing: 1px;
+ }
+
+ .entry-description {
+  font-size: 16px;
+  font-family: Srimo;
+  border: none;
+  margin-left:auto;
+  margin-right:auto;
+  min-width: 100%;
+  min-height: 410px;
+  background: #FFF8F0;
+  color: rgba(132,75,143,0.55);
+  letter-spacing: 1px;
+ }
+
+ .entry-submit {
+   width: 100%;
+   border: 0;
+   color: rgba(132,75,143,0.80);
+   background-color: #FFF5E9;
+   opacity: 25%;
+ }
+
+ .add-picture-div {
+  padding: 2px;
+  margin: 0px;
+  height: 75px;
+  border-top: 1px solid #979797;
+  box-shadow: inset 0px 3px 0 0 #D8D8D8;
+  bottom: 0px;
+ }
