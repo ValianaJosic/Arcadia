@@ -1,13 +1,28 @@
 .NavigationPane {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: center;
     text-align: center;
     background-color: #fff8f0;
     font-family: 'Ramabhadra', sans-serif;
 }
 
+.Navigation-Header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.Navigation-Header div {
+    width: 15%;
+}
+
+
+
+.Navigation-Header h2,
 .Navigation-Section {
     display: flex;
     flex-direction: row;

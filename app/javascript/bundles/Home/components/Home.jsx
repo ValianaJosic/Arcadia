@@ -49,7 +49,7 @@ export default class Home extends React.Component {
           <div id='home-body-month-left' className='ft-nunito-20 ft-cr-pleasent-purple'>
             <span>November</span>
           </div>
-          <a href='' id='home-body-month-right'>
+          <a href='/calendars' id='home-body-month-right'>
             <i className="far fa-calendar-alt ft-cr-barney" id="home-body-month-cal-icon"></i>
           </a>
         </div>
