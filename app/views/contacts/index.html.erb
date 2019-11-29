@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body class="contacts-background">
 <h1 class="contacts-title">Important Contacts</h1>
 <%= stylesheet_link_tag "contacts.css" %>
@@ -6,69 +7,96 @@
     <div class="row">
     <div class="form-group col-md-8">
       <%= form.label :name, class: "flexit"  %>
+=======
+<div class="contact-body">
+
+<div class="contact-close-div">
+    <div class="trail-nav"></div>
+  <a class="contact-close" href='javascript:history.go(-1)'>
+<img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg" alt="close button" />
+</a>
+</div>
+
+<div class="contact-text-div">
+<div class="contact-header">Important Contacts</div>
+</div>
+
+<div class="contact-form-div">
+<div>
+<%= form_with url: 'contacts#add' do |form| %>
+    <div class="row">
+    <div class="form-group col-md-8">
+      <p class="contact-name">Name</p>
+>>>>>>> master
       <%= form.text_field :name,
-      autocomplete: "off", autofocus: true, class: "form-control" %>
+      autocomplete: "off", autofocus: true, class: "form-control contact-field" %>
     </div>
     <div class="form-group col-md-8">
-      <%= form.label :phone1 %>
+      <p class="contact-name">Phone</p>
       <%= form.text_field :phone1,
-      autocomplete: "off", autofocus: true, class: "form-control" %>
+      autocomplete: "off", autofocus: true, class: "form-control contact-field" %>
     </div>
-    <div class="form-group col-md-4">
+    <%# <div class="form-group col-md-4">
       <%= form.label :phone2 %>
-      <%= form.text_field :phone2,
-      class: "form-control" %>
-    </div>
-    <div class="form-group col-md-4">
-      <%= form.label :fax %>
+      <%# <%= form.text_field :phone2, %>
+      <%# class: "form-control cintact-field" %> 
+    <%# </div> %> 
+    <div class="form-group col-md-4"> 
+       <p class="contact-name">Fax</p>
       <%= form.text_field :fax,
-      class: "form-control" %>
-    </div>
+      class: "form-control contact-field" %> 
+    </div> 
     <div class="form-group col-md-4">
-      <%= form.label :email %>
+      <p class="contact-name">Email</p>
       <%= form.text_field :email,
-      class: "form-control" %>
+      class: "form-control contact-field" %>
     </div>
     <div class="form-group col-md-4">
-      <%= form.label :address1 %>
+      <p class="contact-name">Address</p>
       <%= form.text_field :address1,
-      class: "form-control" %>
+      class: "form-control contact-field" %>
     </div>
+    <%# <div class="form-group col-md-4"> %>
+      <%# <%= form.label :address2 %> 
+      <%# <%= form.text_field :address2, %>
+      <%# class: "form-control" %> 
+    <%# </div> %>
+    <%# <div class="form-group col-md-4"> %>
+      <%# <%= form.label :city %> 
+      <%# <%= form.text_field :city, %>
+      <%# class: "form-control" %> 
+    <%# </div> %>
+    <%# <div class="form-group col-md-4"> %>
+      <%# <%= form.label :state %> 
+      <%# <%= form.text_field :state, %>
+      <%# class: "form-control" %> 
+    <%# </div>       %>
     <div class="form-group col-md-4">
-      <%= form.label :address2 %>
-      <%= form.text_field :address2,
-      class: "form-control" %>
-    </div>
-    <div class="form-group col-md-4">
-      <%= form.label :city %>
-      <%= form.text_field :city,
-      class: "form-control" %>
-    </div>
-    <div class="form-group col-md-4">
-      <%= form.label :state %>
-      <%= form.text_field :state,
-      class: "form-control" %>
-    </div>      
-    <div class="form-group col-md-4">
-      <%= form.label :zipcode %>
+      <p class="contact-name">Zipcode</p>
       <%= form.text_field :zipcode,
-      class: "form-control" %>
+      class: "form-control contact-field" %>
     </div> 
+    <%# <div class="form-group col-md-4"> %>
+      <%# <%= form.label :country %> 
+      <%# <%= form.text_field :country, %>
+      <%# class: "form-control" %> 
+    <%# </div>  %>
     <div class="form-group col-md-4">
-      <%= form.label :country %>
-      <%= form.text_field :country,
-      class: "form-control" %>
-    </div> 
-    <div class="form-group col-md-4">
-      <%= form.label :notes %>
+      <p class="contact-name">Notes</p>
       <%= form.text_area :notes,
-      class: "form-control" %>
+      class: "form-control contact-field" %>
     </div>
   </div>
-  <%= form.submit "Create Contact"%>
+  </div>
+  </div>
+  
+  <div class="contact-btn-div">
+  <%= form.submit "Add", class: "contact-btn"%>
+  </div>
 <% end %>
+</div>
 
-<h4>Users Contact List</h4>
+<%# <h4>Users Contact List</h4>
  
 <table>
   <thead>
@@ -91,8 +119,9 @@
  
   <tbody>
     <% @contact.each do |contact| %>
-      <tr>
+      <%# <tr>
         <td><%= contact.name %></td>
+<<<<<<< HEAD
         <td><%= contact.phone1 %></td>
         <td><%= contact.phone2 %></td>
         <td><%= contact.fax %></td>
@@ -109,6 +138,23 @@
   </tbody>
 </table>
 </body>
+=======
+        <%# <td><%= contact.phone1 %></td>
+        <%# <td><%= contact.phone2 %></td>
+        <%# <td><%= contact.fax %></td> 
+        <%# <td><%= contact.email %></td> 
+        <%# <td><%= contact.address1 %></td> 
+        <%# <td><%= contact.address2 %></td> 
+        <%# <td><%= contact.city %></td> 
+        <%# <td><%= contact.state %></td> 
+        <%# <td><%= contact.zipcode %></td> 
+        <%# <td><%= contact.country %></td> 
+        <%# <td><%= contact.notes %></td>  
+      <%# </tr> %>
+    <%# <% end %> 
+  <%# </tbody> %>
+<%# </table> %> 
+>>>>>>> master
  
 
  

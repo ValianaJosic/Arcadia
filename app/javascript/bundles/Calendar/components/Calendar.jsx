@@ -52,7 +52,7 @@ export default class Calendar extends React.Component {
                     <div id='home-body-month-left' className='ft-nunito-20 ft-cr-pleasent-purple' >
                         <span>December</span>
                     </div>
-                    <a href=''>
+                    <a href='javascript:history.go(-1)'>
                         <img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg" alt="close button" />
                     </a>
                 </div>
