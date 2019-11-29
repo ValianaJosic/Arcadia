@@ -1,0 +1,44 @@
+.notifications-body {
+  margin: 0;
+  padding: 0;
+}
+
+.notifications-container {
+  margin: auto;
+  width: 100%;
+  height: 90vh;
+  background-color: #ccc;
+  display:flex;
+  flex-flow: column nowrap;
+  Justify-content: space-evenly;
+  align-items: center;
+}
+
+.notifications-subcontainer1 {
+  justify-content: flex-start;
+  margin: auto;
+  width: 88%;
+  height: 77vh;
+  background-color: #cceeff;
+}
+
+.notifications-subcontainer2 {
+  justify-content: flex-start;
+  margin: auto;
+  width: 100%;
+  height: 19vh;
+  background-color: #fecee5;
+}
+
+
+.notifications-item:nth-child(1) {
+  background-color: #cfa;
+}
+
+.notifications-item:nth-child(2) {
+  background-color: #cfb;
+}
+
+.notifications-item:nth-child(3) {
+  background-color: #cfc;
+}
