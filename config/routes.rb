@@ -1,10 +1,10 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
   devise_for :users
 
   root  'home#index'
 
   resources :profiles, only: [:index]
-  resources :notification, only:  [:index]
+  resources :notification, only: [:index]
   resources :journals do
     resources :journal_entries
   end
