@@ -1,0 +1,33 @@
+<body class="notifications-body">
+   <header class="journal-header">
+      <div class="journal-placeholder">
+      </div>
+  </header>
+  <main class = "notifications-container">
+    <div class = "notifications-subcontainer1">
+      <div class ="notifications-items1">
+        <div class="TOYN">
+          Turn on your notifications
+        </div>
+        <div class="SYCRIA">
+          so you can receive important alerts
+        </div>
+          <div class ="notifications-image">
+          <img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/Image-Notifications.svg" alt="Turn on Arcadia Notifications" id="giant-purple-phone">
+        </div>
+      </div>
+    </div>
+    <div class = "notifications-subcontainer2">
+      <div class ="notifications-items2">
+        <div class ="notifications-enable">
+            <div><%= link_to 'Enable Notifications', notification_index_path, remote: true %></div>
+        </div>
+      </div>
+    <div>
+  </main>
+    <div class="notification-footer">
+      <div class ="notifications-nrn">
+        <%= link_to 'Not now', notification_index_path, remote: false %>
+      </div>
+    </div>
+</body>
