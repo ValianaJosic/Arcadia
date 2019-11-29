@@ -1,5 +1,6 @@
 .agenda-background {
   background-color: #f7eafc;
+  height: 100vh;
 }
 
 .agenda-title {
@@ -54,7 +55,6 @@
   margin: 0;
   list-style: none;
   display: flex;
-  -webkit-box-flex-group: row;
   justify-content: space-between;
   height: 50px;
   line-height: 30px;

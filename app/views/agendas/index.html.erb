@@ -1,31 +1,19 @@
 <div class="agenda-background">
 <h1 class="agenda-title"> Agenda </h1>
 
-<%= react_component("Agenda") %>
-
 <div class= "line"></div>
 <div class= "meds"> Medications </div>
 
 
 <div>
-<div class= "meds-list" >
-
-<div>
-<div>Menopur</div>
-<div>Gonal F</div>
-<div>Lupron</div>
-</div>
-<div>
-<div>0.6/cc</div>
-<div>0.3/cc</div>
-<div>20 units</div>
-</div >
-<div>
-<div>9 am</div>
-<div>9 am</div>
-<div>9 am</div>
-</div>
-
+  <div class= "meds-list" >
+    <div>
+      <% @prescriptions.each do |prescription|%>
+        <div><%= prescription.name%></div>
+        <div><%= prescription.dosage_form%></div>
+      <%end%>
+    </div>
+  </div>
 </div >
 
 
@@ -36,21 +24,15 @@
 
 
 <div>
-<table class= "appointments-list">
-<tbody>
-<tr>
-<td>Dr. Ory</td>
-<td>8 am</td>
-</tr>
-</tbody>
-</table>
+  <div class= "appointments-list">
+    <div>
+    </div>
+  </div>
+</div>
 
 <div class= "line3"></div>
 <div class= "notes"> Notes </div>
 <div class="notes-list">
   <div class="notes-list">- Call Progyny Insurance to request Cycle Start Approval</div>
-
-
-
-
+  <div class="notes-list">- Buy ice packs</div>
 </div>
