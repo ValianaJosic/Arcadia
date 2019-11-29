@@ -1,3 +1,38 @@
-<h1> These are my agendas </h1>
+<div class="agenda-background">
+<h1 class="agenda-title"> Agenda </h1>
 
-<%= react_component("Agenda")%>
+<div class= "line"></div>
+<div class= "meds"> Medications </div>
+
+
+<div>
+  <div class= "meds-list" >
+    <div>
+      <% @prescriptions.each do |prescription|%>
+        <div><%= prescription.name%></div>
+        <div><%= prescription.dosage_form%></div>
+      <%end%>
+    </div>
+  </div>
+</div >
+
+
+
+
+<div class= "line2"></div>
+<div class= "appointments"> Appointments </div>
+
+
+<div>
+  <div class= "appointments-list">
+    <div>
+    </div>
+  </div>
+</div>
+
+<div class= "line3"></div>
+<div class= "notes"> Notes </div>
+<div class="notes-list">
+  <div class="notes-list">- Call Progyny Insurance to request Cycle Start Approval</div>
+  <div class="notes-list">- Buy ice packs</div>
+</div>

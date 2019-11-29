@@ -1,2 +1,104 @@
+.agenda-background {
+  background-color: #f7eafc;
+  height: 100vh;
+}
 
+.agenda-title {
+  font-family: "Ramabhadra";
+  color: #200026;
+  font-size: 40px;
+  text-align: center;
+}
 
+.meds {
+  font-family: "Ramabhadra";
+  color: #200026;
+  font-size: 30px;
+  text-align: left;
+  padding: 5px;
+}
+
+.meds-list {
+  font-family: "Nunito", sans-serif;
+  color: #780d8d;
+  font-size: medium;
+  font-weight: 100;
+  margin: 5px;
+  text-align: center;
+  padding: 2px;
+  margin: 0;
+  list-style: none;
+
+  height: 80px;
+  line-height: 20px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.appointments {
+  font-family: "Ramabhadra";
+  color: #200026;
+  font-size: 30px;
+  text-align: left;
+  padding: 5px;
+}
+
+.appointments-list {
+  font-family: "Nunito";
+  color: #780d8d;
+  font-size: medium;
+  font-weight: 100;
+  margin: 5px;
+  text-align: center;
+  padding: 2px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  line-height: 30px;
+}
+
+.notes {
+  font-family: "Ramabhadra";
+  color: #200026;
+  font-size: 30px;
+  text-align: left;
+  padding: 5px;
+}
+
+.notes-list {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #780d8d;
+  padding: 5px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.line {
+  width: 350px;
+  height: 46px;
+  border-bottom: 1px solid rgba(241, 172, 254, 0.55);
+  position: absolute;
+  margin: 5px;
+}
+
+.line2 {
+  width: 350px;
+  height: 49px;
+  border-bottom: 1px solid rgba(241, 172, 254, 0.55);
+  position: absolute;
+  margin: 5px;
+}
+
+.line3 {
+  width: 350px;
+  height: 44px;
+  border-bottom: 1px solid rgba(241, 172, 254, 0.55);
+  position: absolute;
+  margin: 5px;
+}
