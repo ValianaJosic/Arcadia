@@ -1,5 +1,13 @@
 class JournalsController < ApplicationController
   def index
+    @journal = current_user.journals.all
+    respond_to do |format|
+      format.html
+      format.json do
+        journal = current_user.contacts
+        render json: journals
+      end
+    end
   end
 
   def show
