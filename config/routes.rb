@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'notification/index'
   devise_for :users
 
   root  'home#index'
-  
+
   resources :profiles, only: [:index]
+  resources :notifications, only:  [:index]
   resources :journals do
     resources :journal_entries
   end
