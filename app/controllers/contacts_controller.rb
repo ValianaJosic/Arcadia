@@ -28,6 +28,10 @@ class ContactsController < ApplicationController
       country: params[:country],
       notes: params[:notes]
     )
+
+    if @contactadd.save
+       redirect_to '/events'
+    end
   end
 
 end
