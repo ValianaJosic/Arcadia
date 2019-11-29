@@ -1,0 +1,6 @@
+if (Notification.permission === 'granted') {
+  var title = 'Arcadia Reminders'
+  var body = 'It is <%= Time.now %>, Arcadia thinks you should check your agenda.'
+  var options = { body: body }
+  new Notification(title, options)
+}
