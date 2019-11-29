@@ -1,44 +1,76 @@
 .notifications-body {
+  background-color: #FFF8F0;
   margin: 0;
   padding: 0;
 }
 
 .notifications-container {
+  font-family: 'Srimo', sans-serif;
   margin: auto;
   width: 100%;
   height: 90vh;
-  background-color: #ccc;
   display:flex;
   flex-flow: column nowrap;
-  Justify-content: space-evenly;
   align-items: center;
 }
 
 .notifications-subcontainer1 {
-  justify-content: flex-start;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   width: 88%;
   height: 77vh;
-  background-color: #cceeff;
 }
 
 .notifications-subcontainer2 {
-  justify-content: flex-start;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   width: 100%;
   height: 19vh;
   background-color: #fecee5;
 }
 
-
-.notifications-item:nth-child(1) {
-  background-color: #cfa;
+.notifications-items1 {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.notifications-item:nth-child(2) {
-  background-color: #cfb;
+.TOYN {
+  height: 33px;
+  width: 318px;
+  color: #200026;
+  font-family: "Helvetica Neue";
+  font-size: 28px;
+  line-height: 34px;
 }
 
-.notifications-item:nth-child(3) {
-  background-color: #cfc;
+.SYCRIA {
+  height: 22px;
+  width: 340px;
+  color: #B142C7;
+  font-family: "Helvetica Neue;
+  font-size: 16px;
+  font-weight: 80;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom:15px;
+}
+
+.notifications-image {
+  flex: flex-end;
+  margin-top: 75px;
+  height: 68.57%;
+}
+
+.notifications-item4 {
+  background-color: #cfe;
+}
+
+.notifications-item5 {
+  background-color: #cfd;
 }
