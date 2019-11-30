@@ -11,10 +11,12 @@
 <div class="Navigation-Section 1">
 
 <div class="Navigation-Buttons 1">
-<a href="">
-<a href="journals/new"><i class="far fa-sticky-note"></i></a>
-</a>
+
+<%= link_to new_journal_path do %>
+<i class="far fa-sticky-note"></i>
+<% end %>
 <h3>Journal<h3>
+
 </div>
 
 <div class="Navigation-Buttons 2"> 
@@ -35,9 +37,11 @@
 </div>
 
 <div class="Navigation-Buttons 4">
-<a href="">
+
+<%= link_to contacts_url do %>
 <i class="far fa-address-book"></i>
-</a>
+<% end %>
+
 <h3>Contacts<h3>
 </div>
 </div>
@@ -45,18 +49,19 @@
 <div class="Navigation-Section 3">
 
 <div class="Navigation-Buttons 5">
-<a href="">
 
+<%= link_to prescriptions_url do %>
 <i class="far fa-pills"></i>
-</a>
+<% end %>
 <h3>Medications<h3>
 </div>
 
 <div class="Navigation-Buttons 6">
-<a href="">
 
+<%= link_to events_url do %>
 <i class="far fa-calendar-check"></i>
-</a>
+<% end %>
+
 <h3>Appointments<h3>
 </div>
 </div>
