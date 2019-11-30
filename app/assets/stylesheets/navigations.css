@@ -59,3 +59,13 @@ color:  rgba(32, 0, 38, 0.81);
     font-family: 'Ramabhadra', sans-serif;
     color:  rgba(32, 0, 38, 0.81);
 }
+
+#nav-overlay{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    display: none;
+}
