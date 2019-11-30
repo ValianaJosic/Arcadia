@@ -1,14 +1,11 @@
-<%# <%= react_component("Calendar") %>
-
  <main>
-  <%# <div class="device"> %>
   <div id=encapsulation>
-    <header>
-      <div class="header-bar"></div>
-      <div class="header-title">
+    <header class="calendar-main-header">
+      <div class="calendar-header-bar"></div>
+      <div class="calendar-header-title">
         <h1>ARCADIA IVF SCHEDULER</h1>
       </div>
-      <div class="header-weekdays">
+      <div class="calendar-header-weekdays">
         <span>sun</span>
         <span>mon</span>
         <span>tue</span>
@@ -18,9 +15,9 @@
         <span>sat</span>
       </div>
     </header>
-    <section>
+    <section class="calendar-main-section">
         <h2 class="month">December</h2>
-        <form>
+        <form class="calendar-form">
           <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="vacation" />
           <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="walk" />
           <input type="radio" name="calendar-label-bg" class="calendar-label-bg" id="fishing" />
@@ -107,7 +104,6 @@
           <input type="checkbox" name="" id="" class="day next-month">
           <input type="checkbox" name="" id="" class="day next-month">
         </div>
-    </section>
+    </section> 
     </div> 
- <%# </div> %>
 </main> 
