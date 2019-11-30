@@ -76,14 +76,14 @@ html, body {
   font-weight: 300;
   line-height: 1;
   background-color: $color-bg;
-  width: 20rem;
+  width: 360px;
   height: 100vh;
   counter-reset: previous-month 29 current-month next-month;
   margin: 0;
 }
 
 #encapsulation{
-  width: 20rem;
+  width: 100vw;
   height: 100vh; 
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
