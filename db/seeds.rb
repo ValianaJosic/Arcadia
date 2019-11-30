@@ -20,11 +20,11 @@ Survey.create(name: "Sign up survey", is_active: true)
 question = [
   "I am the...",
   "I have...",
-  "Why are you intrested in fertility treatment?",
-  "Does your insurance cover fertility?",
+  "Why are you interested in fertility treatment?",
+  "Does your insurance cover your treatment?",
   "I want to learn about...",
   "What is your zipcode?",
-  "What year were you"
+  "What year were you born?"
 ]
 
 question.each_with_index do |q, i|
@@ -64,9 +64,9 @@ User.all.each do |u|
         "Egg Donation",
         "Surrogacy",
         "FET",
-        "Donor Sprem",
+        "Donor Sperm",
         "Clomid",
-        "Embryo Frezezing"
+        "Embryo Freezing"
       ],
       [
         Faker::Address.zip
@@ -87,7 +87,7 @@ end
   User.all.each do |u|
     Prescription.create(
       user: u,
-      name: Faker::ProgrammingLanguage.name
+      name: drugs.sample
     )
   end
 end
