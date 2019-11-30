@@ -20,14 +20,14 @@
     <div class = "notifications-subcontainer2">
       <div class ="notifications-items2">
         <div class ="notifications-enable">
-            <div><%= link_to 'Enable Notifications', notification_index_path, remote: true %></div>
+            <div><%= link_to 'Enable Notifications', notifications_path,remote: true, method: :post %></div>
         </div>
       </div>
     <div>
   </main>
     <div class="notification-footer">
       <div class ="notifications-nrn">
-        <%= link_to 'Not now', notification_index_path, remote: false %>
+        <%= link_to 'Not now', notifications_path, method: :post %>
       </div>
     </div>
 </body>
