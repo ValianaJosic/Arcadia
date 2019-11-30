@@ -62,33 +62,37 @@ export default class EventForm extends React.Component {
   
   render() {
     return(
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <label htmlFor="type">Type</label>
-            <select onChange={this.handleInputChange('type')} >
+      <div class="event-form-div">
+      <form class="event-form" onSubmit={this.handleSubmit}>
+        <div >
+          <label htmlFor="type" class="event-name">Type</label>
+            <select class="event-select" onChange={this.handleInputChange('type')} >
               {this.optionsArray(this.state.eventTypeOptions).map(option => option)}
             </select>
         </div>
         <div>
-          <label htmlFor="name">Name</label>
-            <select onChange={this.handleInputChange('name')} >
+          <label htmlFor="name" class="event-name">Name</label>
+            <select class="event-select" onChange={this.handleInputChange('name')} >
               {this.state.eventTypeData.map(data => <option key={data.id} value={data.id}>{data.name}</option> )}
             </select>
         </div>
         <div>
-          <label htmlFor="date">Date</label>
-          <input id="date" onChange={this.handleInputChange('date')} type="date" />
+          <label htmlFor="date" class="event-name">Date</label>
+          <input class="event-select" id="date" onChange={this.handleInputChange('date')} type="date" />
         </div>
         <div>
-          <label htmlFor="time">Time</label>
-          <input id="time" onChange={this.handleInputChange('time')} type="time" />
+          <label htmlFor="time" class="event-name">Time</label>
+          <input class="event-select" id="time" onChange={this.handleInputChange('time')} type="time" />
         </div>
         <div>
-          <label htmlFor="notes">Notes</label>
-          <input id="notes" onChange={this.handleInputChange('notes')} type="text" />
+          <label htmlFor="notes" class="event-name">Notes</label>
+          <input class="event-note" id="notes" onChange={this.handleInputChange('notes')} type="text" />
         </div>
-        <button type="submit" >Submit</button>
+        <div class="event-btn-div">
+        <button type="submit" class="event-btn" >Add</button>
+        </div>
       </form>
+      </div>
       )
     }
   }

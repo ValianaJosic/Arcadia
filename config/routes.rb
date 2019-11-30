@@ -1,14 +1,15 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
   devise_for :users
 
   root  'home#index'
-  
+
   resources :profiles, only: [:index]
+  resources :notifications, only: [:index, :create]
   resources :journals do
     resources :journal_entries
   end
-  resources :events, only: [:index, :create]
-  resources :contacts, only: [:index, :create]
+  resources :events, only: [:index, :create, :new]
+  resources :contacts, only: [:index, :create, :new]
   resources :prescriptions, only: [:index, :create]
   resources :alerts, only: [:index]
   resources :settings, only: [:index]

@@ -38,7 +38,8 @@
     <div class="mySlides fade">
       <div class="trail-welcome">Welcome to Arcadia</div>
       <img  src='https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/Welcome+Page+Baby.svg' style='width: 100%;' alt="pelican"/>
-      <div class="trail-btn-div"><button class="trail-started"><%= link_to "Let's get started", new_user_registration_path %></button></div> <div class="trail-btn-div"><div class="trail-skip"><%= link_to "Wait, I already have an account", new_user_session_path %></div></div></div>
+      <div class="trail-btn-div"><button class="trail-started"><%= link_to "Let's get started", new_user_registration_path %></button></div> 
+      <div class="trail-btn-div"><div class="trail-skip"><%= link_to "Wait, I already have an account", new_user_session_path %></div></div></div>
     </div>
     </div>
 
@@ -71,8 +72,8 @@ window.addEventListener("load",function() {
     //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
     // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
   
-    slideshowContainer.addEventListener('mouseenter', pause)
-    slideshowContainer.addEventListener('mouseleave', resume)
+    slideshowContainer && slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer && slideshowContainer.addEventListener('mouseleave', resume)
 })
 
 // NEXT AND PREVIOUS CONTROL
@@ -112,8 +113,8 @@ function showSlides(n){
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  if (slides[slideIndex - 1]) slides[slideIndex-1].style.display = "block";
+  if (dots[slideIndex -1]) dots[slideIndex-1].className += " active";
 }
 
 pause = () => {

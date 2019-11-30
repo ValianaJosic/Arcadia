@@ -1,24 +1,24 @@
 <body class="bkgrd-cr-sheer">
-<%= render 'journals/newheader'%>
+  <%= render 'journals/newheader'%>
 
-<div class="entry-container">
-  <%= form_for @journal, local: true do |form| %>
+  <div class="entry-container">
+    <%= form_for @journal, local: true do |form| %>
 
-    <div class="entry-item">
-      <%= form.text_field :title , class: "entry-title", placeholder: "Journal Title" %>
+      <div class="entry-item">
+        <%= form.text_field :title , class: "entry-title", placeholder: "Journal Title" %>
+      </div>
+
+      <div class="entry-item">
+        <%= form.text_area :description , class: "entry-description", placeholder: "Tell us about your day" %>
+      </div>
+
+      <div class="entry-item">
+        <%= form.submit 'Post Journal Entry', class: "entry-submit" %>
+      </div>
+
+    <% end %>
+    <div class="add-picture-div">
+
     </div>
-
-    <div class="entry-item">
-      <%= form.text_area :description , class: "entry-description", placeholder: "Tell us about your day" %>
-    </div>
-
-    <div class="entry-item">
-      <%= form.submit 'Post Journal Entry', class: "entry-submit" %>
-    </div>
-
-  <% end %>
-  <div class="add-picture-div">
-
   </div>
-</div>
 </body>
