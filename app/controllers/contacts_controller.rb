@@ -1,5 +1,9 @@
 class ContactsController < ApplicationController
 
+  def new
+    @contact = Contact.new
+  end
+
   def index
     @contact = current_user.contacts.all
     respond_to do |format|
@@ -13,25 +17,29 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contactadd = Contact.create(
-      user: current_user,
-      name: params[:name],
-      phone1: params[:phone1],
-      phone2: params[:phone2],
-      fax: params[:fax],
-      email: params[:email],
-      address1: params[:address1],
-      address2: params[:address2],
-      city: params[:city],
-      state: params[:state],
-      zipcode: params[:zipcode],
-      country: params[:country],
-      notes: params[:notes]
-    )
+    @contactadd = current_user.contacts.new(contact_params)
 
     if @contactadd.save
-       redirect_to '/events'
+       redirect_to '/contacts'
     end
   end
 
+  private
+
+  def contact_params
+    params.require(:contact).permit(
+      :name,
+      :phone1,
+      :phone2,
+      :fax,
+      :email,
+      :address1,
+      :address2,
+      :city,
+      :state,
+      :zipcode,
+      :country,
+      :notes
+    )
+  end
 end
