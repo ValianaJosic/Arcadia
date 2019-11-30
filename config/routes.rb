@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root  'home#index'
 
   resources :profiles, only: [:index]
-  resources :notification, only: [:index]
+  resources :notifications, only: [:index, :create]
   resources :journals do
     resources :journal_entries
   end
