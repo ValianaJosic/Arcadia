@@ -58,12 +58,12 @@ export default class PrescriptionForm extends Component {
     const { drug } = this.state;
     return (
       <div>
-        <h1>Prescription Form</h1>
         <span>search for 0002-3238</span>
         <div>
           <input
             type="search"
             id="ndcCode"
+            className="prescription-input"
             onChange={this.handleInputChange("ndcQuery")}
             placeholder="Search by NDC Code"
           />
@@ -74,7 +74,7 @@ export default class PrescriptionForm extends Component {
           </span>
         </div>
 
-        <div>
+        <div class="prescription-info">
           <form onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="brand">Brand Name</label>

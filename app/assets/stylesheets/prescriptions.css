@@ -1,0 +1,17 @@
+.prescription-title {
+  color: #200026;
+  font-size: 24px;
+  font-family: "Srimo", sans-serif;
+}
+
+.prescription-input {
+  width: 250px;
+  height: 50px;
+}
+
+.prescription-info {
+  color: #200026;
+  font-size: 14px;
+  font-family: "Srimo", sans-serif;
+  margin-right: 5px;
+}
