@@ -20,25 +20,30 @@
 </div>
 
 <div class="Navigation-Buttons 2"> 
-<a href="">
-<i class="fas fa-user-friends"></i>
-</a>
-<h3>Support<h3>
+
+<%= link_to new_event_url do %>
+<i class="far fa-calendar-check"></i>
+<% end %>
+
+<h3>Appointments<h3>
+
 </div>
 
 </div>
 
 <div class="Navigation-Section 2">
 <div class="Navigation-Buttons 3">
-<a href="">
-<i class="fal fa-meh"></i>
-</a>
-<h3>Symptoms<h3>
+
+<%= link_to prescriptions_url do %>
+<i class="far fa-pills"></i>
+<% end %>
+<h3>Medications<h3>
+
 </div>
 
 <div class="Navigation-Buttons 4">
 
-<%= link_to contacts_url do %>
+<%= link_to new_contact_url do %>
 <i class="far fa-address-book"></i>
 <% end %>
 
@@ -49,20 +54,17 @@
 <div class="Navigation-Section 3">
 
 <div class="Navigation-Buttons 5">
-
-<%= link_to prescriptions_url do %>
-<i class="far fa-pills"></i>
-<% end %>
-<h3>Medications<h3>
+<a href="">
+<i class="fal fa-meh"></i>
+</a>
+<h3>Symptoms<h3>
 </div>
 
 <div class="Navigation-Buttons 6">
 
-<%= link_to events_url do %>
-<i class="far fa-calendar-check"></i>
-<% end %>
-
-<h3>Appointments<h3>
+<i class="fas fa-user-friends"></i>
+</a>
+<h3>Support<h3>
 </div>
 </div>
 
