@@ -6,8 +6,9 @@
 
 <div class="log-in-header-div">Log in</div>
 
-<div class="log-in-email-div">
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="log-in-email-div">
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'sign-up-field email-sign-up', placeholder: "Email" %>
   </div>
@@ -21,7 +22,7 @@
 
 <div class="log-in-remember-div sign-up-remember">
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field remember-div">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>

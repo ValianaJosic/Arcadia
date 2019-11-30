@@ -54,13 +54,15 @@
   text-align: center;
   padding-top: 30px;
 }
-
+.remember-div{
+  padding-top: 20px;
+}
 .log-in-btn-div { 
   grid-area: 5 / 1 / 6 / 2;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr;
-  margin: auto;
+  margin: 50px;
   text-align: center;
   color: #844B;
 }
