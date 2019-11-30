@@ -11,18 +11,24 @@
     <%= react_component("Home") %>
   </div>
 </div>
-
-<%= render 'home/nav' %>
 <%= react_component("FAB") %>
+<%= render 'home/nav' %>
+
 
 <script>
   function openNav() {
   document.getElementById('home-nav').style.width = '170px'
-  document.getElementById('nav-overlay').style.display = 'block'
+  document.getElementById('home-nav').classList.add('open')
+  document.getElementById('home-nav').classList.remove('closed')
+  document.getElementById('nav-overlay').classList.add('open')
+  document.getElementById('nav-overlay').classList.remove('closed')
   }
 
   function closeNav() {
   document.getElementById('home-nav').style.width = '0%';
-  document.getElementById('nav-overlay').style.display = 'none'
+  document.getElementById('nav-overlay').classList.add('closed')
+  document.getElementById('nav-overlay').classList.remove('open')
+  document.getElementById('home-nav').classList.add('closed')
+  document.getElementById('home-nav').classList.remove('open')
   }
 </script>
