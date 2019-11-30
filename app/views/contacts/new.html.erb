@@ -1,0 +1,72 @@
+<div class="contact-body">
+
+<div class="contact-close-div">
+  <div class="trail-nav"></div>
+  <a class="contact-close" href='javascript:history.go(-1)'>
+<img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg" alt="close button" />
+</a>
+</div>
+
+<div class="contact-text-div">
+<div class="contact-header">Important Contacts</div>
+</div>
+
+<%= form_with url: 'contacts#add' do |form| %>
+    <div class="row contact-form-div">
+    <div class="form-group col-md-8 contact-bkgrnd">
+      <p class="contact-name">Name</p>
+      <%= form.text_field :name,
+      autocomplete: "off", autofocus: true, class: "form-control contact-field" %>
+    </div>
+    <div class="form-group col-md-8 contact-bkgrnd">
+      <p class="contact-name">Phone</p>
+      <%= form.text_field :phone1,
+      autocomplete: "off", autofocus: true, class: "form-control contact-field" %>
+    </div>
+    <div class="form-group col-md-4 contact-bkgrnd"> 
+       <p class="contact-name">Fax</p>
+      <%= form.text_field :fax,
+      class: "form-control contact-field" %> 
+    </div> 
+    <div class="form-group col-md-4 contact-bkgrnd">
+      <p class="contact-name">Email</p>
+      <%= form.text_field :email,
+      class: "form-control contact-field" %>
+    </div>
+    <div class="form-group col-md-4 contact-bkgrnd">
+      <p class="contact-name">Address</p>
+      <%= form.text_field :address1,
+      class: "form-control contact-field" %>
+    </div>
+    <div class="form-group col-md-4 contact-bkgrnd"> 
+       <p class="contact-name">City</p>
+      <%= form.text_field :city, 
+      class: "form-control contact-field" %> 
+    </div> 
+    <div class="form-group col-md-4 contact-bkgrnd"> 
+      <p class="contact-name">State</p> 
+      <%= form.text_field :state, 
+      class: "form-control contact-field" %>
+    </div>       
+    <div class="form-group col-md-4 contact-bkgrnd">
+      <p class="contact-name">Zipcode</p>
+      <%= form.text_field :zipcode,
+      class: "form-control contact-field" %>
+    </div> 
+    <div class="form-group col-md-4 contact-bkgrnd"> 
+     <p class="contact-name">Country</p> 
+     <%= form.text_field :country, 
+     class: "form-control contact-field" %> 
+   </div>  
+    <div class="form-group col-md-4 contact-bkgrnd">
+      <p class="contact-name">Notes</p>
+      <%= form.text_area :notes,
+      class: "form-control contact-field" %>
+    </div>
+  </div>
+  
+  <div class="contact-btn-div">
+  <%= form.submit "Add", class: "contact-btn"%>
+  </div>
+<% end %>
+</div>
