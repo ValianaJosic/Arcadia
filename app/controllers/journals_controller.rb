@@ -41,7 +41,7 @@ class JournalsController < ApplicationController
 
   private
   def journal_params
-    params.require(:journal).permit(:title, :description)
+    params.require(:journal).permit(:title, :description, :image)
   end
 
   def set_journal
