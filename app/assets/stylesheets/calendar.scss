@@ -80,6 +80,7 @@ $header-height: $day-height * 2;
   counter-reset: previous-month 29 current-month next-month;
   margin: 0;
 }
+
 aside, main {
   width: 50%;
   height: $device-height;
