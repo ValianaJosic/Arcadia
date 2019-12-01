@@ -5,8 +5,11 @@ const PrescriptionList = ({ prescriptions = [] }) => (
     <h1 className="prescription-list-title">Prescription List</h1>
     {prescriptions.map(drug => (
       <>
-        <div className="prescription-added">{drug.id}</div>
-        <div className="prescription-added">{drug.name}</div>
+        <div>{drug.name}</div>
+        <div>{drug.dosage_form}</div>
+        <div>{drug.product_type}</div>
+        <div>{drug.product_ndc}</div>
+        <div>{drug.user_notes}</div>
       </>
     ))}
   </div>

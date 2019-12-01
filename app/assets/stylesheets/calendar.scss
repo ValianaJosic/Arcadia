@@ -1,8 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
 $device-width: 360px;
 $device-height: 640px;
-
 
 $color-bg: #844b8f;
 $color-app:#fff8f0;
@@ -66,20 +63,30 @@ $header-height: $day-height * 2;
   position: relative;
 }
 
+#calendar-close{
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+  float: right;
+}
+
 #encapsulation{
+
+  
   width: 100vw;
   height: 100vh; 
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   overflow: hidden;
 
-  font-family: Lato, sans-serif;
+  font-family: "Ramabhadra", Helvetica;
   font-weight: 300;
   line-height: 1;
   background-color: $color-bg;
   counter-reset: previous-month 29 current-month next-month;
   margin: 0;
 }
+
 aside, main {
   width: 50%;
   height: $device-height;
@@ -91,7 +98,7 @@ aside, main {
 .calendar-header-bar {
   height: 1rem;
   color: $color-text-light;
-  font-weight: bolder;
+  font-weight: normal;
 }
 
 .calendar-header-title {
@@ -99,7 +106,7 @@ aside, main {
   color: $color-text-light;
   
   h1 {
-    font-weight: bolder;
+    font-weight: normal;
     font-size: 1rem;
     margin: 0;
     padding: 0;
@@ -111,7 +118,7 @@ aside, main {
 
 .calendar-header-weekdays {
   color: $color-text-light;
-  font-weight: bolder;
+  font-weight: normal;
   height: 2rem;
 
   span {

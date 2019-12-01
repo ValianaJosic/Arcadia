@@ -119,3 +119,11 @@
   bottom: 47px;
   right: 10px;
 }
+
+input:focus {
+  outline-color: #BB98BA;
+}
+
+textarea:focus {
+  outline-color: #BB98BA;
+}

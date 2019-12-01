@@ -30,7 +30,7 @@
 
 .mySlides {
 display: none;
-height: 400px; 
+height: 480px; 
 }
 
 .trail-prev,
@@ -47,9 +47,8 @@ height: 400px;
 .trail-button{
   display: flex;
   justify-content: center;
-  background-color: #FFF5E9 ;
-  padding-bottom: 10vh;
-  padding-top: 15vh;
+  background-color: #FFF5E9;
+  padding-top: 5vh;
 }
 .trail-next {
   border-radius: 3px 3px 3px 3px;
@@ -98,6 +97,7 @@ height: 400px;
   background-color: #FFF5E9;
   border: none;
   text-decoration: underline;
+  padding-top: 20px;
 }
 
 .trail-started{
