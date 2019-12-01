@@ -87,7 +87,7 @@ end
   User.all.each do |u|
     Prescription.create(
       user: u,
-      name: drugs.sample
+      name: "Sample Drug",
       # name: brand_name,
       # generic_name: g_name,  
       # dosage_form: d_form,

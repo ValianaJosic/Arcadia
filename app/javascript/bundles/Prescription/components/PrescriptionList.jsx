@@ -2,7 +2,7 @@ import React from "react";
 
 const PrescriptionList = ({ prescriptions = [] }) => (
   <div>
-    <h1>Prescription List</h1>
+    <h1 className="prescription-list-title">Prescription List</h1>
     {prescriptions.map(drug => (
       <>
         <div>{drug.name}</div>

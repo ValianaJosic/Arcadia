@@ -1,6 +1,70 @@
-<h1>CONTACT INDEXING HAPPENS HERE<h1>
 
+<div class="contacts-body" >
 
-<a class="contact-close" href='javascript:history.go(-1)'>
+<div class="contacts-parent">
+<div class="contact-close-div">
+  <div class="trail-nav"></div>
+  <a class="contact-close" href='javascript:history.go(-1)'>
 <img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg" alt="close button" />
 </a>
+</div>
+
+
+<div class="contacts-text-div">
+<div class="contact-header">Contacts</div>
+</div> 
+</div>
+
+<div class="contacts-tbl-div">
+<table class="t-body-contacts" > 
+  <tbody class="t-body-contacts">
+    <% @contact.each do |contact| %>
+      <tr>
+       <th class="contacts-h">Name</th>
+        <td class="contacts-name contacts-name-notes"><%= contact.name %></td>
+      </tr>
+      <tr>
+       <th class="contacts-h">Phone</th>  
+        <td class="contacts-name"><%= contact.phone1 %></td>
+      </tr>
+      <tr>
+       <th class="contacts-h">Fax</th>  
+        <td class="contacts-name"><%= contact.fax %></td> 
+      </tr>
+      <tr>
+       <th class="contacts-h">Email</th>  
+        <td class="contacts-name"><%= contact.email %></td> 
+      </tr>
+      <tr>
+        <th class="contacts-h">Address</th> 
+        <td class="contacts-name"><%= contact.address1 %></td> 
+      </tr> 
+      <tr>
+        <th class="contacts-h">City</th>  
+        <td class="contacts-name"><%= contact.city %></td>
+      </tr> 
+      <tr>
+        <th class="contacts-h">State</th>  
+        <td class="contacts-name"><%= contact.state %></td>
+      </tr> 
+      <tr>
+        <th class="contacts-h">Zipcode</th>   
+        <td class="contacts-name"><%= contact.zipcode %></td> 
+      </tr>
+      <tr>
+        <th class="contacts-h">Country</th>  
+        <td class="contacts-name"><%= contact.country %></td>
+      </tr>
+      <tr> 
+        <th class="contacts-h contacts-line"> Notes</th>     
+        <td><%= contact.notes %></td>
+      </tr>
+        <tr>
+        <th class="contacts-tbl-div"></th>  
+      </tr>
+    <% end %> 
+  </tbody>
+</table> 
+</div>
+</div>
+

@@ -58,17 +58,19 @@ export default class PrescriptionForm extends Component {
     const { drug } = this.state;
     return (
       <div>
-        <span>search for 0002-3238</span>
-        <div>
+        <div className="prescrip-search">
           <input
             type="search"
             id="ndcCode"
             className="prescription-input"
             onChange={this.handleInputChange("ndcQuery")}
-            placeholder="Search by NDC Code"
+            placeholder="Search by NDC Code, ex. 55566-7501"
           />
           <span>
-            <button className="button is-info" onClick={this.fetchDrugs}>
+            <button
+              className="button is-info prescrip-button"
+              onClick={this.fetchDrugs}
+            >
               Search
             </button>
           </span>
@@ -78,13 +80,20 @@ export default class PrescriptionForm extends Component {
           <form onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="brand">Brand Name</label>
-              <input id="brand" type="text" value={drug.brandName} readOnly />
+              <input
+                id="brand"
+                type="text"
+                className="med-facts"
+                value={drug.brandName}
+                readOnly
+              />
             </div>
             <div>
               <label htmlFor="brand">Generic Name</label>
               <input
                 id="generic-name"
                 type="text"
+                className="med-facts"
                 value={drug.genericName}
                 readOnly
               />
@@ -94,6 +103,7 @@ export default class PrescriptionForm extends Component {
               <input
                 id="dosage-form"
                 type="text"
+                className="med-facts"
                 value={drug.dosageForm}
                 readOnly
               />
@@ -103,6 +113,7 @@ export default class PrescriptionForm extends Component {
               <input
                 id="product-type"
                 type="text"
+                className="med-facts"
                 value={drug.productType}
                 readOnly
               />
@@ -112,6 +123,7 @@ export default class PrescriptionForm extends Component {
               <input
                 id="product-id"
                 type="text"
+                className="med-facts"
                 value={drug.productID}
                 readOnly
               />
@@ -121,6 +133,7 @@ export default class PrescriptionForm extends Component {
               <input
                 id="product-ndc"
                 type="text"
+                className="med-facts"
                 value={drug.productNDC}
                 readOnly
               />
@@ -129,11 +142,14 @@ export default class PrescriptionForm extends Component {
               <label htmlFor="notes">Notes</label>
               <input
                 id="notes"
+                className="med-facts"
                 onChange={this.handleInputChange("userNotes")}
                 type="text"
               />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="prescrip-add-button">
+              Add
+            </button>
           </form>
         </div>
       </div>
