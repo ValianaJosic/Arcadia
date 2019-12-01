@@ -63,11 +63,9 @@ $header-height: $day-height * 2;
   position: relative;
 }
 
-#calendar-close{
-  justify-content: right;
-  align-items: right;
-  text-align: right;
-  float: right;
+#calendar-close-section{
+  display: flex; 
+  flex-direction: row-reverse;
 }
 
 #encapsulation{
