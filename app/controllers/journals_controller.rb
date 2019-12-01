@@ -1,4 +1,6 @@
 class JournalsController < ApplicationController
+  before_action :set_journal, only: [:show, :destroy]
+
   def index
     @journal = current_user.journals.all
     respond_to do |format|
@@ -11,7 +13,7 @@ class JournalsController < ApplicationController
   end
 
   def show
-    @journal = Journal.find(params[:id])
+
   end
 
   def new
@@ -38,7 +40,11 @@ class JournalsController < ApplicationController
   end
 
   private
-    def journal_params
-      params.require(:journal).permit(:title, :description)
-    end
+  def journal_params
+    params.require(:journal).permit(:title, :description)
+  end
+
+  def set_journal
+    @journal = Journal.find(params[:id])
+  end
 end

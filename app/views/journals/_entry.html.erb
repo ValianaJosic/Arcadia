@@ -1,5 +1,5 @@
-  <% @journal.each do |journal| %>
-  <main class="journal-entry-viewer">
+<% @journal.each do |journal| %>
+  <div class="journal-entry-viewer">
     <div class="journal-entry-container">
       <div class="journal-entry-info">
         <div class="info-box">
@@ -15,5 +15,10 @@
       <div class="journal-entry-description">
         <%= journal.description %>
     </div>
-  </main>
-  <% end %>
+    <div>
+      <%= link_to journal_path(journal.id), method: :delete do %>
+        <i class="far fa-trash-alt" id="trash-icon" alt="trash icon"></i>
+      <% end %>
+    </div>
+  </div>
+<% end %>
