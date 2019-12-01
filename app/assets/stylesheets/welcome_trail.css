@@ -37,11 +37,7 @@ height: 480px;
 .trail-next {
   cursor: pointer;
   color: #844B8F;
-<<<<<<< HEAD
-  font-weight: bold ;
-=======
   font-weight: bold;
->>>>>>> master
   font-size: 30px;
   transition: .6s ease;
   border-radius: 0 3px 3px 0;
@@ -52,23 +48,14 @@ height: 480px;
   display: flex;
   justify-content: center;
   background-color: #FFF5E9;
-<<<<<<< HEAD
-  padding-bottom: 10vh;
-  padding-top: 15vh;
-=======
   padding-top: 5vh;
->>>>>>> master
 }
 .trail-next {
   border-radius: 3px 3px 3px 3px;
 }
 
 .trail-prev {
-<<<<<<< HEAD
-  border-radius: 3px 3px 3px 3px ;
-=======
   border-radius: 3px 3px 3px 3px;
->>>>>>> master
   display: flex;
 }
 
