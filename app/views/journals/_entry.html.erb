@@ -6,19 +6,17 @@
           <%= journal.title %>
         </div>
         <div class="info-box">
-          <%= journal.created_at %>
+          <%= journal.created_at.strftime("%m/%d/%Y") %>
         </div>
         <div class="info-box">
+          <%= link_to journal_path(journal.id), method: :delete do %>
+            <i class="far fa-trash-alt" id="trash-icon" alt="trash icon"></i>
+          <% end %>
           <i class="fal fa-folder-open">  Notes</i>
         </div>
       </div>
       <div class="journal-entry-description">
         <%= journal.description %>
-    </div>
-    <div>
-      <%= link_to journal_path(journal.id), method: :delete do %>
-        <i class="far fa-trash-alt" id="trash-icon" alt="trash icon"></i>
-      <% end %>
     </div>
   </div>
 <% end %>
