@@ -30,34 +30,33 @@
 
 .mySlides {
 display: none;
-height: 400px; 
+height: 480px; 
 }
 
 .trail-prev,
 .trail-next {
-  cursor: pointer !important;
-  color: #844B8F !important;
-  font-weight: bold !important;
-  font-size: 30px !important;
-  transition: .6s ease !important;
-  border-radius: 0 3px 3px 0 !important;
+  cursor: pointer;
+  color: #844B8F;
+  font-weight: bold;
+  font-size: 30px;
+  transition: .6s ease;
+  border-radius: 0 3px 3px 0;
 
 }
 
 .trail-button{
-  display: flex !important;
-  justify-content: center !important;
+  display: flex;
+  justify-content: center;
   background-color: #FFF5E9;
-  padding-bottom: 10vh !important;
-  padding-top: 15vh !important;
+  padding-top: 5vh;
 }
 .trail-next {
-  border-radius: 3px 3px 3px 3px !important;
+  border-radius: 3px 3px 3px 3px;
 }
 
 .trail-prev {
-  border-radius: 3px 3px 3px 3px !important;
-  display: flex !important;
+  border-radius: 3px 3px 3px 3px;
+  display: flex;
 }
 
 .trail-prev:hover,
@@ -98,6 +97,7 @@ height: 400px;
   background-color: #FFF5E9;
   border: none;
   text-decoration: underline;
+  padding-top: 20px;
 }
 
 .trail-started{
