@@ -18,10 +18,9 @@ LOOK AT THE STRUCTURE IN app/views/events/index.html.erb as an example %>
 <div>
   <div class= "meds-list" >
     <div>
-      <% @prescriptions.each do |prescription|%>
-        <div><%= prescription.name%></div>
-        <div><%= prescription.generic_name%></div>
-        <div><%= prescription.dosage_form%></div>
+      <% @prescriptions.each do |prescription_event|%>
+        <p><%= prescription_event[:activity_date] %></p>
+        <p><%= prescription_event[:prescription].name %></p>
       <%end%>
     </div>
   </div>
@@ -36,11 +35,9 @@ LOOK AT THE STRUCTURE IN app/views/events/index.html.erb as an example %>
 <div>
   <div class= "appointments-list">
     <div>
-        <% @appointments.each do |appointment|%>
-        <div><%= appointment.name%></div>
-        <div><%= appointment.phone1%></div>
-        <div><%= appointment.city%></div>
-        <div><%= appointment.state%></div>
+        <% @appointments.each do |appointment_event|%>
+        <div><%= appointment_event[:activity_date] %></div>
+        <div><%= appointment_event[:appointment].name%></div>
         <%end%>
     </div>
   </div>
