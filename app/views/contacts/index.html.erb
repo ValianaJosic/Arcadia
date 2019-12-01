@@ -12,6 +12,10 @@
 
 <div class="contacts-text-div">
 <div class="contact-header">Contacts</div>
+  <div class="search-contacts">
+    <input class="contacts-input" type="text" placeholder="&#xF002; 
+    Search" style="font-family:Arial, FontAwesome" />
+  </div> 
 </div> 
 </div>
 
@@ -20,39 +24,39 @@
   <tbody class="t-body-contacts">
     <% @contact.each do |contact| %>
       <tr>
-       <th class="contacts-h">Name</th>
-        <td class="contacts-name contacts-name-notes"><%= contact.name %></td>
+       <th class="contacts-h contacts-line">Name</th>
+        <td class="contacts-name-1"><%= contact.name %></td>
       </tr>
       <tr>
-       <th class="contacts-h">Phone</th>  
+       <th class="contacts-h contacts-line">Phone</th>  
         <td class="contacts-name"><%= contact.phone1 %></td>
       </tr>
       <tr>
-       <th class="contacts-h">Fax</th>  
+       <th class="contacts-h contacts-line">Fax</th>  
         <td class="contacts-name"><%= contact.fax %></td> 
       </tr>
       <tr>
-       <th class="contacts-h">Email</th>  
+       <th class="contacts-h contacts-line">Email</th>  
         <td class="contacts-name"><%= contact.email %></td> 
       </tr>
       <tr>
-        <th class="contacts-h">Address</th> 
+        <th class="contacts-h contacts-line">Address</th> 
         <td class="contacts-name"><%= contact.address1 %></td> 
       </tr> 
       <tr>
-        <th class="contacts-h">City</th>  
+        <th class="contacts-h contacts-line">City</th>  
         <td class="contacts-name"><%= contact.city %></td>
       </tr> 
       <tr>
-        <th class="contacts-h">State</th>  
+        <th class="contacts-h contacts-line">State</th>  
         <td class="contacts-name"><%= contact.state %></td>
       </tr> 
       <tr>
-        <th class="contacts-h">Zipcode</th>   
+        <th class="contacts-h contacts-line">Zipcode</th>   
         <td class="contacts-name"><%= contact.zipcode %></td> 
       </tr>
       <tr>
-        <th class="contacts-h">Country</th>  
+        <th class="contacts-h contacts-line">Country</th>  
         <td class="contacts-name"><%= contact.country %></td>
       </tr>
       <tr> 
@@ -60,7 +64,7 @@
         <td><%= contact.notes %></td>
       </tr>
         <tr>
-        <th class="contacts-tbl-div"></th>  
+        <th class="contacts-text-div"></th>  
       </tr>
     <% end %> 
   </tbody>
