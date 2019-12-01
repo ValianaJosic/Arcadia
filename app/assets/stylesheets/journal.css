@@ -31,12 +31,12 @@
 .journal-nav-buttons {
   display: flex;
   height: 44px;
-  align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-bottom: 2px solid #E8E3DC;
   box-shadow: 0px 0px 4px 0px #E8E3DC;
   align-items: center;
+  justify-content: flex-start;
   margin: 0;
 }
 
@@ -45,11 +45,12 @@
 }
 
 #journal-nav-back {
-  margin: 5px 0 0 0;
+  margin: 5px 0px 0 0;
 }
 
 #journal-nav-button2 {
-  margin: 0;
+  margin: 0 auto;
+  padding-right: 15px;
 }
 
 #journal-nav-button3 {
@@ -88,6 +89,7 @@
   margin: 0px;
   flex-direction: row;
   flex-basis: 20px;
+  display:flex;
 }
 
 .info-box {
@@ -112,7 +114,7 @@
   flex: 1;
   font-family: Srimo, sans-serif;
   font-weight: 450;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 22px;
 }
 
@@ -133,6 +135,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+  justify-content: space-evenly;
 }
 
 /* This is for making a new entry. */
@@ -154,6 +157,7 @@
 }
 
 .entry-title{
+  outline: none;
   border: none;
   font-family: Srimo;
   margin-left:auto;
@@ -167,6 +171,7 @@
  }
 
  .entry-description {
+  outline: none;
   font-size: 16px;
   font-family: Srimo;
   border: none;
