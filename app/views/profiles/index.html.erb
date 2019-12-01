@@ -1,6 +1,42 @@
-<h1>Users Profile Page</h1>
-<h3><%= link_to "Go Home",root_url %></h3>
-
-<a href='javascript:history.go(-1)'>
+<div class="profile-container">
+<div class="profile-nav-div">
+  <a class="profile-close" href='javascript:history.go(-1)'>
 <img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg" alt="close button" />
 </a>
+</div>
+  <div class="profile-title">Profile</div>
+  
+  <div class="profile-main">  
+  <div class="user-profile">
+    <div class="profile-avatar-container">
+      <img src="https://images.pexels.com/photos/756453/pexels-photo-756453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="profile-avatar" />
+    </div>
+
+    <h2 class="profile-user-name">lisa johnson</h2>
+    <ul class="profile-list">
+      <li class="profile-list-item">Medications</li>
+      <li class="profile-list-item">Appointments</li>
+      <li class="profile-list-item">Educate</li>
+      <li class="profile-list-item">Contacts</li>
+    </ul>
+  </div>
+
+  <div class="profile-user-info">
+    <div class='followers'>
+      <div class="profile-h3">Analysis</div>
+    </div>
+    <div class="following">
+      <div class="profile-h3">Resources</div>
+    </div>
+
+    <div class="number-of-posts">
+      <div class="profile-h3">Community</div>
+    </div>
+  </div>
+  </div>
+
+  <div class="profile-tweet">
+
+    <div class="profile-h4"><i class="fab fa-twitter tweet-profile"></i> Help & Support</div>
+  </div>
+</div>
