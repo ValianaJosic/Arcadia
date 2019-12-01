@@ -17,6 +17,7 @@ require("channels");
 
 import ReactOnRails from "react-on-rails";
 
+import Splash from "../bundles/Splash/components/Splash";
 import Prescription from "../bundles/Prescription/Prescription";
 import Home from "../bundles/Home/components/Home";
 import EventForm from "../bundles/Event/components/EventForm";
@@ -32,6 +33,7 @@ ReactOnRails.register({
   SignUpForm,
   Agenda,
   Calendar,
-  FAB
+  FAB,
+  Splash
 });
 Notification.requestPermission().then(function(result) {});
