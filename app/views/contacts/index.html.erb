@@ -24,47 +24,44 @@
   <tbody class="t-body-contacts">
     <% @contact.each do |contact| %>
       <tr>
-       <th class="contacts-h contacts-line">Name</th>
-        <td class="contacts-name-1"><%= contact.name %></td>
+       <th class="profile-name">Name</th>
+        <td class="profile-info"><%= contact.name %></td>
       </tr>
       <tr>
-       <th class="contacts-h contacts-line">Phone</th>  
-        <td class="contacts-name"><%= contact.phone1 %></td>
+       <th class="profile-name">Phone</th>  
+        <td class="profile-info"><%= contact.phone1 %></td>
       </tr>
       <tr>
-       <th class="contacts-h contacts-line">Fax</th>  
-        <td class="contacts-name"><%= contact.fax %></td> 
+       <th class="profile-name">Fax</th>  
+        <td class="profile-info"><%= contact.fax %></td> 
       </tr>
       <tr>
-       <th class="contacts-h contacts-line">Email</th>  
-        <td class="contacts-name"><%= contact.email %></td> 
+       <th class="profile-name">Email</th>  
+        <td class="profile-info"><%= contact.email %></td> 
       </tr>
       <tr>
-        <th class="contacts-h contacts-line">Address</th> 
-        <td class="contacts-name"><%= contact.address1 %></td> 
+        <th class="profile-name">Address</th> 
+        <td class="profile-info"><%= contact.address1 %></td> 
       </tr> 
       <tr>
-        <th class="contacts-h contacts-line">City</th>  
-        <td class="contacts-name"><%= contact.city %></td>
+        <th class="profile-name">City</th>  
+        <td class="profile-info"><%= contact.city %></td>
       </tr> 
       <tr>
-        <th class="contacts-h contacts-line">State</th>  
-        <td class="contacts-name"><%= contact.state %></td>
+        <th class="profile-name">State</th>  
+        <td class="profile-info"><%= contact.state %></td>
       </tr> 
       <tr>
-        <th class="contacts-h contacts-line">Zipcode</th>   
-        <td class="contacts-name"><%= contact.zipcode %></td> 
+        <th class="profile-name">Zipcode</th>   
+        <td class="profile-info"><%= contact.zipcode %></td> 
       </tr>
       <tr>
-        <th class="contacts-h contacts-line">Country</th>  
-        <td class="contacts-name"><%= contact.country %></td>
+        <th class="profile-name">Country</th>  
+        <td class="profile-info"><%= contact.country %></td>
       </tr>
       <tr> 
-        <th class="contacts-h contacts-line"> Notes</th>     
-        <td><%= contact.notes %></td>
-      </tr>
-        <tr>
-        <th class="contacts-text-div"></th>  
+        <th class="profile-name-notes"> Notes</th>     
+        <td class="profile-info-notes"><%= contact.notes %></td>
       </tr>
     <% end %> 
   </tbody>
