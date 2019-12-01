@@ -650,3 +650,17 @@ aside, main {
     background-color: $color-app;
   }
 }
+
+.calendar-close-div {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: rgba(223, 163, 235, 0.55);
+}
+.calendar-nav{
+  height: 50px;
+  background-color:rgba(223, 163, 235, 0.55);
+}
+.calendar-close {
+  border: none;
+  font-size: 15px;
+  float: right;
+}
