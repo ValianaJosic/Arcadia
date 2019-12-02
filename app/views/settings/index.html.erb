@@ -1,11 +1,17 @@
 <div class="settings-background">
+   
+   <div class="setting-header-div">
    <div class="settings-close">
      <a href='javascript:history.go(-1)'>
       <img src="https://arcadia-static-assets.s3.amazonaws.com/arcadia-svgs/close.svg" alt="close button" />
      </a>
    </div>
-   <h1 class="settings-title">Settings</h1>
-<div class= "line-settings-2"></div>
+
+    <div class="settings-title-div">
+        <h1 class="settings-title">Settings</h1>
+    </div>
+    <div class= "line-settings-2"></div>
+    </div>
 
 <div class="settings-options-parent">
     <% @settings.each do |setting| %>
@@ -19,6 +25,7 @@
     <% end %>
 </div>
 <div class="settings-footnote">
-Enable this option to receive daily health insights according to your logged symptoms.
+<div class="settings-note">Enable this option to receive daily health insights according to your logged symptoms.</div>
+</div>
 </div>
 
