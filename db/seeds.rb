@@ -120,29 +120,29 @@ end
   end
 end
 
-4.times do |i|
-  Prescription.all.each do |pr|
-    Event.create(
-      user: pr.user,
-      activity_date: Faker::Date.between(from: 2.days.from_now, to: 2.weeks.from_now),
-      notes: Faker::Lorem.sentences,
-      eventable_type: 'Prescription',
-      eventable_id: pr.id
-    )
-  end
-end
+# 4.times do |i|
+#   Prescription.all.each do |pr|
+#     Event.create(
+#       user: pr.user,
+#       activity_date: Faker::Date.between(from: 2.days.from_now, to: 2.weeks.from_now),
+#       notes: Faker::Lorem.sentences,
+#       eventable_type: 'Prescription',
+#       eventable_id: pr.id
+#     )
+#   end
+# end
 
-2.times do |i|
-  Contact.all.each do |c|
-    Event.create(
-      user: c.user,
-      activity_date: Faker::Date.between(from: 2.weeks.from_now, to: 2.months.from_now),
-      notes: Faker::Lorem.sentences,
-      eventable_type: 'Contact',
-      eventable_id: c.id
-    )
-  end
-end
+# 2.times do |i|
+#   Contact.all.each do |c|
+#     Event.create(
+#       user: c.user,
+#       activity_date: Faker::Date.between(from: 2.weeks.from_now, to: 2.months.from_now),
+#       notes: Faker::Lorem.sentences,
+#       eventable_type: 'Contact',
+#       eventable_id: c.id
+#     )
+#   end
+# end
 
 puts "Created #{User.count} users and #{Profile.count} profiles."
 puts "Created #{Survey.count} survey with #{Question.count} question. "
