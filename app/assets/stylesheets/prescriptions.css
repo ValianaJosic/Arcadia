@@ -40,6 +40,8 @@
   font-size: 22px;
   font-family: "Srimo", sans-serif;
   text-align: center;
+  border-top: 4px solid rgba(241,172,254,0.55);
+  padding-top: 10px;
 }
 
 .prescription-added {
@@ -65,10 +67,15 @@
   color: whitesmoke;
   font-family: "Srimo", sans-serif;
   font-weight: lighter;
-  font-size: 20px;
-  height: 40px;
-  width: 53px;
+  font-size: 30px;
+  height: 50px;
+  width: 330px;
   border-radius: 4px;
+}
+
+.pres-btn{
+  display: flex;
+  justify-content: center;
 }
 
 .prescription-close {
@@ -84,4 +91,23 @@
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   color: #844b8f;
+}
+
+.drug-info{
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  color: #844b8f;
+}
+
+.drug-div{
+  overflow: scroll;
+  background-color: #fff8f0;
+  border-bottom: 1px solid rgba(241,172,254,0.55);
+}
+
+.drug-info-name{
+  color: #200026;
+  font-size: 14px;
+  font-family: "Srimo", sans-serif; 
+  text-decoration: underline;
 }

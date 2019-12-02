@@ -147,9 +147,11 @@ export default class PrescriptionForm extends Component {
                 type="text"
               />
             </div>
+            <div class="pres-btn">
             <button type="submit" class="prescrip-add-button">
               Add
             </button>
+            </div>
           </form>
         </div>
       </div>
