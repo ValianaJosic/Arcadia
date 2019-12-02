@@ -78,7 +78,7 @@ User.all.each do |u|
     Response.create(
       user: u,
       question: q,
-      value: responses[i].sample
+      # value: responses[i].sample
     )
   end
 end

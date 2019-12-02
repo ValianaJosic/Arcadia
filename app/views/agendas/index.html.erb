@@ -17,12 +17,20 @@ LOOK AT THE STRUCTURE IN app/views/events/index.html.erb as an example %>
 
 <div>
   <div class= "meds-list" >
-    <div>
-      <% @prescriptions.each do |prescription_event|%>
-        <p><%= prescription_event[:activity_date] %></p>
-        <p><%= prescription_event[:prescription].name %></p>
-      <%end%>
-    </div>
+  <table> 
+    <tbody>
+        <% @prescriptions.each do |prescription_event|%>
+        <tr>
+          <th>Drug Name</th>
+          <th>Administration Time</th>
+        </tr>
+        <tr>
+        <td><%= prescription_event[:prescription].name %></td>
+        <td><%= prescription_event[:activity_date] %></td>
+        </tr>
+        <%end%>
+      </tbody>
+   </table> 
   </div>
 </div >
 
@@ -34,12 +42,20 @@ LOOK AT THE STRUCTURE IN app/views/events/index.html.erb as an example %>
 
 <div>
   <div class= "appointments-list">
-    <div>
+  <table> 
+  <tbody>
         <% @appointments.each do |appointment_event|%>
-        <div><%= appointment_event[:activity_date] %></div>
-        <div><%= appointment_event[:appointment].name%></div>
+        <tr>
+          <th>POC</th>
+          <th>Event Date</th>
+        </tr>
+        <tr>
+          <td><%= appointment_event[:appointment].name%></td>
+          <td><%= appointment_event[:activity_date] %></td>
+        </tr>
         <%end%>
-    </div>
+      </tbody>
+    </table> 
   </div>
 </div>
 
